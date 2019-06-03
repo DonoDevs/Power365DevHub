@@ -1,0 +1,34 @@
+Executive Summary:
+
+
+The ORA (Online Retirement Application) proof of concept was developed to showcase some of the capabilities that be acheived leveraging Microsoft Dynynamics 365 and Dynamics Portals; to build out a robust online retirement application system. This  proof of concept levereaged some of the key benefits of low-no code approaches for delivering role based dynamics UI/UX experiences, and server side automation.
+
+
+
+This Design pakage is broken up into 5 different pieces:
+
+1. Portal Technical Design Document:
+
+This is the main document that highlights the key features demoed in the vision demonstrator video. THis is to showcase how all of the different federal organizations can leverage the portal to manage their Agency's data and administer the retirement application processes.
+
+***Note: This demo heavily showcased the portal component, and the CRM backend requirement have not yet been fleshed out. The CRM technical documentation is very light, and the plan was to update once we got the requirements for ORA's business work streams.
+
+2. CRM Technical Design Document:
+
+This is for the back end automation and where the data is stored from the portal front end. This is where ORA employees would do their work once the ORA Package is submitted to ORA.
+
+
+3. ORA Portal Website Architecture:
+
+This is a visio diagram that details the entire Portal Web Application's site schema. This has all the details necessary to understand how this was all built.
+
+4. ORA Web form Steps design
+
+This is a visio diagram that details out the entire architecture of how we designed the wizard driven form processes on the portal to collect the package data.
+
+
+5. ORA TDD Code Appendix
+
+This is a document that has all of the custom code such as JavaScript, Liquid, HTML, and CSS code used to build the entire portal application. There are many references to the code appendix in the website architecture visio diagram.
+
+

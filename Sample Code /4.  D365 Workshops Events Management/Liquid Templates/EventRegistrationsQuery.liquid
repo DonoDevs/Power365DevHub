@@ -1,0 +1,159 @@
+{% include "Layout 1 Column" %}
+{% block main %}
+
+     <div class="container">
+
+        {% assign event = entities['props_event'][request.params.id] %}
+                       
+                    {%assign maxRegistration = event.mgs_maximumregistrations %}
+                    {%assign totalRegistrations = event.mgs_totalregistrations %}
+                    {%assign registrationSpotsLeft = maxRegistration | minus: totalRegistrations %}
+                
+                    {%if registrationSpotsLeft < 1%}
+                            <script>
+                                alert("No more Registration Spots Available"); 
+                                $("#Event_Registrations").hide(100000);  
+                            </script> 
+                            <div class ="Event-Capacity-Details-Registration-ClosedNoSpots">
+                                <p><b><u>Event Registration Capacitity Details</u></b></p>
+                                <p><b>Event Max Registrations is: </b>{{maxRegistration}}</p>
+                                <p><b>Total Event Registrations:</b>{{totalRegistrations}}</p>
+                                <p><b>Registration Spots  Left:  </b>{{registrationSpotsLeft}}</p>
+                                <a  class="btn btn-primary btn-large"style="background:red " >
+                                    
+                                    <span class="fa fa-times-circle"></span>Registration Maximum Capacity Reached. 
+                                </a>    
+                            </div>      
+                    {%else%}
+                            <script>
+                                //alert("Registration Spots Available");
+                            </script>
+                            <div class ="Event-Capacity-Details-Registration-OpenSpots">
+                                <p><b><u>Event Registration Capacitity Details</u></b></p>
+                                <p><b>Event Max Registrations is: </b>{{maxRegistration}}</p>
+                                <p><b>Total Event Registrations:</b>{{totalRegistrations}}</p>
+                                <p><b>Registration Spots  Left:  </b>{{registrationSpotsLeft}}</p>
+                            </div> 
+
+                    {%endif%}
+
+     </div>
+
+    {%comment%}
+    <p><b>*************************Results Returned from Entity View****************************</b></p>
+    <p><b>Event id is:</b>{{ event.props_eventid }}</p>
+    <p><b>Event name is:</b>{{ event.props_name }}</p>
+    <p><b>Portal Event URL is: </b>{{event.mgs_portaleventurl}}</p>
+    <p><b>Event Max Registrations is: </b>{{event.mgs_maximumregistrations}}</p>
+    {%endcomment%}
+    {%comment%}
+    {% entityview logical_name:'props_eventregistration', name:"Active Event Registrations"%}
+                    
+                    {% assign event = entities['props_event'][request.params.id] %}
+                    
+                    {%assign registrationQuerysCount = entityview.total_records %}
+                    {%assign registrationCount = registrationQuerysCount | times: 1 %}
+                    
+                    {%assign maxRegistration = event.mgs_maximumregistrations %}
+                    {%assign totalRegistrations = event.mgs_maximumregistrations %}
+                    {%assign registrationSpotsLeft = maxRegistration | minus: registrationCount %}
+                
+                    {%if registrationSpotsLeft < 1%}
+                            <script>
+                                alert("No more Registration Spots Available"); 
+                                $("#Event_Registrations").hide(100000);  
+                            </script> 
+                            <div class ="Event-Capacity-Details-Registration-ClosedNoSpots">
+                                <p><b><u>Event Registration Capacitity Details</u></b></p>
+                                <p><b>Event Max Registrations is: </b>{{event.mgs_maximumregistrations}}</p>
+                                <p><b>Total Event Registrations:</b>{{ entityview.total_records }}</p>
+                                <p><b>Registration Spots  Left:  </b>{{ registrationSpotsLeft}}</p>
+                                <a  class="btn btn-primary btn-large"style="background:red " >
+                                    
+                                    <span class="fa fa-times-circle"></span>Registration Maximum Capacity Reached. 
+                                </a>    
+                            </div>      
+                    {%else%}
+                            <script>
+                                //alert("Registration Spots Available");
+                            </script>
+                            <div class ="Event-Capacity-Details-Registration-OpenSpots">
+                                <p><b><u>Event Registration Capacitity Details</u></b></p>
+                                <p><b>Event Max Registrations is: </b>{{event.mgs_maximumregistrations}}</p>
+                                <p><b>Total Event Registrations:</b>{{ entityview.total_records }}</p>
+                                <p><b>Registration Spots  Left:  </b>{{ registrationSpotsLeft}}</p>
+                            </div> 
+
+                    {%endif%}
+        
+    {% endentityview %}
+    {%endcomment%}
+    
+{% endblock %}
+
+
+
+{%comment%}
+/*******************CSS For Capacity Details:*************/
+.Event-Capacity-Details-Registration-ClosedNoSpots {
+    position: relative;
+    top: -100px;
+    left: 290px;
+}
+#liquid_form > div.Event-Capacity-Details-Registration-ClosedNoSpots > a {
+    position: relative;
+    top: -170px;
+    left: 0px;
+}
+#liquid_form > div.Event-Capacity-Details-Registration-ClosedNoSpots > p:nth-child(1) > b > u {
+    border-bottom-style: double;
+}
+
+.Event-Capacity-Details-Registration-OpenSpots {
+    position: relative;
+    top: -310px;
+    left: 290px;
+}
+#liquid_form > div.Event-Capacity-Details-Registration-OpenSpots > p:nth-child(1) > b > u {
+    border-bottom-style: double;
+}
+
+/*********************CSS for Hiding Entity Grid Records and Detials on Portal*********************/
+
+h2.tab-title {
+    visibility: hidden;
+}
+#Event_Registrations > div > div.view-grid {
+    visibility: hidden;
+}
+.view-pagination {
+    visibility: hidden;
+}
+
+#Event_Registrations > div > div.view-empty.message > div {
+    visibility: hidden;
+}
+
+/****************************CSS for Positioning and Coloring of hte Buttons and Labels*************/
+#Event_Registrations > div > div.view-toolbar.grid-actions.clearfix > div > div > a {
+    position: absolute;
+    top: -800px;
+    left: -200px;
+    size: large;
+    padding: 10px 70px;
+    font-size: 20px;
+}
+textarea#props_eventsummary {
+    border-style: solid;
+    border-color: #2f5fef;
+}
+.crmEntityFormView .cell label {
+    float: left;
+    display: inline;
+    font-size: large;
+    /* background: blue; */
+    /* color: white; */
+    border-bottom-style: double;
+}
+
+{%endcomment%}

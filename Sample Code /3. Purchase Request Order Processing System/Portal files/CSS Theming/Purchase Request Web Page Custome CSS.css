@@ -1,0 +1,56 @@
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.42857;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #002050;
+    border-color: #002050;
+}
+
+a {
+    color: #002050;
+    text-decoration: none;
+}
+
+body > div.container > div.row > div > h3 {
+    /* background-image: linear-gradient(70deg, #C28A0C,#fff,#112E51,#b31717); */
+    background-color: #b31717;
+    color: white;
+    text-align: center;
+}
+
+
+.breadcrumb > li a, .breadcrumb > li a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+.breadcrumb>.active {
+    color: #FFF;
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: #112e51;
+    /*background-image: linear-gradient(10deg, #112e51,#FFF);*/
+    border-radius: 4px;
+    color: #fff;
+}

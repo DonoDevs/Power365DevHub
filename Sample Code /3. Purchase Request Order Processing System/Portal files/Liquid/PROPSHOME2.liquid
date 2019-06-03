@@ -1,0 +1,39 @@
+{% assign forums_sm = sitemarkers["Forums"] %}
+
+<section class="page_section section-landing">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <h1 class="section-landing-heading">{% editable snippets 'Home/Title' default: 'Contoso' %}</h1>
+        <h2 class="section-landing-sub-heading">{% editable snippets 'Home/Subtitle' default: 'Customer' %}</h2>
+        {% include 'Search' %}
+      </div>
+    </div>
+  </div>
+  <div class="layer_down">&nbsp;</div>
+</section>
+<section class="page_section section-knowledge">
+  <div class="layer_up">&nbsp;</div>
+  <div class="container">
+    <div class="content-home">
+      <h2 class="blue_border">{% editable snippets "Home/MostPopularHeading" default: resx["Most_Popular"] %}</h2>
+      {% include 'Knowledge Management - Most Popular Articles' showdescription: true %}
+    </div>
+    <div class="row sidebar-home no-lr-margins">
+      <div class="col-md-4">{% include 'Knowledge Management - Most Popular Articles' showdescription: false %}</div>
+      <div class="col-md-4">{% include 'Knowledge Management - Most Recent Articles' %}</div>
+      <div class="col-md-4">{% include 'Knowledge Management - Top Rated Articles' %}</div>
+    </div>
+  </div>
+</section>
+<section class="page_section section-sub-landing color-inverse">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text_center-mobile">
+        <h1>{{ forums_sm.adx_name | escape }}</h1>
+        {% editable snippets "Forum/HomeDescription" %}
+        <a href="{{ forums_sm.url | h }}" class="btn btn-info-home btn-lg-home" title="{{ snippets['Home/ViewMoreButton'] | default: resx['View_More'] | h }}">{{ snippets['Home/ViewMoreButton'] | default: resx['View_More'] | h }}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+{% extends 'layout_1_column' %}
+{% block main %}
+  {% if user %}
+    {% assign purchaseRequestor= user | has_role: 'Portal Users: PSA' %} 
+    {% if is_psa %}
+      {% comment %}A user with the PSA role should see both Part A and Part B applications{% endcomment%}
+      {% assign formName = 'Check Application Status Part A and Part B' %}
+    {% else %}
+      {% comment %}All other users should only see Part A applications{% endcomment %}
+      {% assign formName = 'Check Application Status Part A' %}
+    {% endif %}
+    {% entityform name: formName %}
+  {% else %}
+      <h2>Please sign in to check the status of your application(s).<h2>
+  {% endif %}
+{% endblock %}
+
+{% extends 'layout_1_column' %}
+{% block main %}
+{% if user %}
+  {% case user.roles  %}
+  {% when 'Purchase Requestor' %}
+    {User {{user.fullname}} is a Purchase Requestor}
+  {% when 'Branch Manager' %}
+    {User {{user.fullname}} is a Branch Manager}
+  {% when 'GateKeeper' %}
+    {User {{user.fullname}} is a GateKeeper}
+  {% when 'Supply Manager' %}
+    {User {{user.fullname}} is a Supply Manager}
+  {% when 'Budget Acquisition and Execution' %}
+    {User {{user.fullname}} is a Budget Acquisition and Execution}
+  {% else %}
+    User {{user.fullname}} does not have a PROPS web role assigned. Please contact administrator to get access
+  {%endcase%}
+{% else %}
+      <h2>Please sign in to access purchase requesting capabilities.<h2>
+{% endif %}
+{% endblock %}
+  
+
+

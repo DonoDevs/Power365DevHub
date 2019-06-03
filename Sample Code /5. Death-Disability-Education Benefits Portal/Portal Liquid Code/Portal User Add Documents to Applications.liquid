@@ -1,0 +1,9 @@
+{% extends 'layout_1_column' %}
+{% block main %}
+{% if user.gnext_typeofuser_t_.label == 'Public Safety Agency Representative' %}
+    {% assign formName = 'Submit Portal User Documents Part A and B' %}
+{% else %}
+    {% assign formName = 'Submit Portal User Documents Part A' %}
+{% endif %}
+{% entityform name: formName %}
+{% endblock %}

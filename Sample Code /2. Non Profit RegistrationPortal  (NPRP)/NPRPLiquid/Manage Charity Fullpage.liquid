@@ -1,0 +1,224 @@
+{%if page.title == 'Edit Charity Registration' or page.title == 'Create Charity Registration'%}
+    {% assign queryId = request.params['stepid'] %}
+    {%if queryId != null%}
+        {% assign webformstep = entities.adx_webformstep[queryId] %}
+            Your Webform step ID is: {{webformstep.crs_webformstepid}} --------------------------------
+            <script>
+            var charityregwebformstepid = '{{webformstep.crs_webformstepid}}'
+            $(document).ready(function() {
+               $("#crs_webformstepid").val(charityregwebformstepid);
+            });
+            </script>    
+    {%endif%}
+    
+    {%assign charity = entities['account'][request.params.id]%}
+    Charity id is: {{ charity.id }} ---------------------------------
+    Charity name is: {{ charity.name }} ---------------------------------
+    Charity Status is: {{ charity.statecode.label }} ---------------------------------
+    Your Query String is: {{request.url}}--------------------
+    
+    {% assign entity_logical_name = 'crs_charityofficer' %}
+    {% assign charityofficer = entities[entity_logical_name][request.params.cid] %}
+    Charity officer id is : {{charityofficer.id}} ---------------------------------
+    Charity officer name is: {{charityofficer.crs_name}} ---------------------------------
+    {%comment%}
+    {%assign builtstring = request.url%}
+    This is what the query string should really be: {{builtstring|add_query: 'RegistrationId','9F068CC6-AF92-E711-80CD-005056904BD8'}}-----------------------------
+    {% assign account = entities.account['guid'] %} 
+    This is the account: {{ account.name }}
+    {%endcomment%}
+   
+    {%if request.url contains "RegistrationId" or webformstep.crs_webformstepid == "Charity REG 4 "%}
+        {% assign entity_logical_name = 'crs_charityinitialregistration' %}
+        {% assign registration = entities[entity_logical_name][request.params.registrationid] %}
+        Charity Reg id is : {{registration.id}} ---------------------------------
+        Charity Reg name is: {{registration.crs_name}} ---------------------------------
+        Charity Reg amendmentRequest value is: {{registration.crs_amendmentrequest.value}} ---------------------------------
+        Charity Reg amendmentRequest label is: {{registration.crs_amendmentrequest.label}} ---------------------------------
+        Charity Reg type value is: {{registration.crs_intialorrenewal}}----------- Initial is False(0), Renewal is True (1) ---------------------------------
+        
+       
+        {% assign entity_logical_name = 'crs_charityinitialregistration' %}
+        {% assign registration = entities[entity_logical_name][request.params.registrationid] %}
+        Charity Reg id is : {{registration.id}} ---------------------------------
+        Charity Reg name is: {{registration.crs_name}} ---------------------------------
+        Charity Reg amendmentRequest value is: {{registration.crs_amendmentrequest.value}} ---------------------------------
+        Charity Reg amendmentRequest label is: {{registration.crs_amendmentrequest.label}} ---------------------------------
+        Charity Reg type value is: {{registration.crs_intialorrenewal}}----------- Initial is False(0), Renewal is True (1) ---------------------------------
+        
+
+
+
+        {%if registration.crs_intialorrenewal == false %}
+                    {This is  an initial registration and the amendment request field is visible} ---------------------------------
+                    <script>
+                    $(document).ready(function() {
+                    $("#crs_amendmentrequest").closest('td').show("fast");
+                    });
+                    </script> 
+        {%else%}
+                    {This is  not initial registration and the amendment request field is hidden} ---------------------------------
+                    <script>
+                    $(document).ready(function() {
+                    $("#crs_amendmentrequest").closest('td').hide("fast");
+                    });
+                    </script> 
+        {%endif%}
+        
+        
+        
+        
+        
+        {%if registration.crs_amendmentrequest.value == 170960000%}
+            {You selected Yes for the amendment request} ---------------------------------
+            <script>
+            $(document).ready(function() {
+               $("#NextButton").attr('disabled', false);
+            });
+            </script>  
+            
+        {%else%}
+            {You selected no for the amendment request} ---------------------------------
+            
+            {%if webformstep.adx_type.value == 100000004 and webformstep.adx_usercontrolpath contains "~/Areas/NPRP/Controls/DocumentUploadWebFormStep.ascx" %}
+                  Your user control path is: {{webformstep.adx_usercontrolpath}}
+                  <script>
+                  $(document).ready(function() {
+                     $("#NextButton").attr('disabled', true);
+                  });
+                  </script>
+            {%endif%}
+            
+        {%endif%}
+        
+        
+        
+    {%endif%}
+
+{%endif%}
+
+{%if page.title == 'Edit/view Co-Venture Contract'%}
+    {%assign charity = entities['account'][request.params.id]%}
+    Charity id is: {{ charity.id }} ---------------------------------
+    Charity name is: {{ charity.name }} ---------------------------------
+    Charity Status is: {{ charity.statecode.label }} ---------------------------------
+    Your Query String is: {{request.url}}--------------------
+
+    {% assign entity_logical_name = 'crs_commercialcoventurec' %}
+    {% assign coventurecontract = entities[entity_logical_name][request.params.refid] %}---------------------------------
+    Commercial Coventure Contract id is: {{coventurecontract.id}}---------------------------------
+    Commercial Coventure Contract Name is: {{coventurecontract.crs_coventurebusinessname}}---------------------------------
+    Commercial Coventure Contract Status Value is: {{coventurecontract.crs_stateofcontract.value}}---------------------------------
+    Commercial Coventure Contract Status Label is: {{coventurecontract.crs_stateofcontract.label}}---------------------------------
+
+    {%comment%} Display the View Coventure Contract Webform if the stats us Approved or In-Process  or Denied {%endcomment%}
+    {%if coventurecontract.crs_stateofcontract.value == 170960001 or coventurecontract.crs_stateofcontract.value == 170960004 or coventurecontract.crs_stateofcontract.value == 170960002 %}
+
+        {% webform name: 'Portal-MCS-NPRP Co-Venture Contract View' %}
+
+    {%else%}
+
+        {% webform name: 'Portal-MCS-NPRP Co-Venture Contract Edit' %}
+
+    {%endif%}
+
+
+
+{%endif%}
+
+
+{%if page.title == 'Create Co-Venture Report'%}
+{%assign charity = entities['account'][request.params.id]%}
+    Charity id is: {{ charity.id }} ---------------------------------
+    Charity name is: {{ charity.name }} ---------------------------------
+    Charity entity logical name is: {{charity.logicalname}}----------------------
+    Charity Status is: {{ charity.statecode.label }} ---------------------------------
+    Your Query String is: {{request.url}}--------------------
+
+    {% assign entity_logical_name = 'crs_commercialcoventurec' %}
+    {% assign coventurecontract = entities[entity_logical_name][request.params.refid] %}---------------------------------
+    Commercial Coventure Contract id is: {{coventurecontract.id}}---------------------------------
+    Commercial Coventure Contract Name is: {{coventurecontract.crs_coventurebusinessname}}---------------------------------
+    Commercial Coventure Contract Status Value is: {{coventurecontract.crs_stateofcontract.value}}---------------------------------
+    Commercial Coventure Contract Status Label is: {{coventurecontract.crs_stateofcontract.label}}---------------------------------
+
+
+    <script>
+           
+            var coventureReportCharity = '{{charity.id}}'
+            var coventureCharityReportName = '{{charity.name}}'
+            var coventureReportCharityEntityLogicalName = '{{charity.logicalname}}'
+            var coventureContractBusinessName = '{{coventurecontract.crs_coventurebusinessname}}'
+            var coventureContractAddressLine1 = '{{coventurecontract.crs_addressline1}}'
+            var coventureContractAddressLine2 = '{{coventurecontract.crs_addressline2}}'
+            var coventureContractCity = '{{coventurecontract.crs_city}}'
+            var coventureContractState = '{{coventurecontract.crs_state.value}}'
+            var coventureContractZip = '{{coventurecontract.crs_zip}}'
+            var coventureContractEmail = '{{coventurecontract.crs_email}}'
+            var coventureContractPhoneNumber = '{{coventurecontract.crs_phonenumber}}'
+            
+            
+
+            $(document).ready(function() {
+               $("#crs_charity").val(coventureReportCharity);
+               $("#crs_charity_name").val(coventureCharityReportName);
+               $("#crs_charity_entityname").val(coventureReportCharityEntityLogicalName);
+               $("#crs_coventurebusinessname").val(coventureContractBusinessName);
+               $("#crs_addressline1").val(coventureContractAddressLine1);
+               $("#crs_addressline2").val(coventureContractAddressLine2);
+               $("#crs_city").val(coventureContractCity);
+               $("#crs_state").val(coventureContractState);
+               $("#crs_zip").val(coventureContractZip);
+               $("#crs_email").val(coventureContractEmail);
+               $("#crs_phonenumber").val(coventureContractPhoneNumber);
+
+               $("#crs_coventurebusinessname, #crs_addressline1, #crs_addressline2, #crs_city, #crs_zip, #crs_email, #crs_phonenumber").prop( "readonly", true );
+               $("#crs_state").attr("style", "pointer-events: none;");
+               
+            });
+    </script>    
+{%endif%}
+
+
+
+
+
+
+
+{%if page.title == 'Edit/view Co-Venture Report'%}
+    {%assign charity = entities['account'][request.params.id]%}
+    Charity id is: {{ charity.id }} ---------------------------------
+    Charity name is: {{ charity.name }} ---------------------------------
+    Charity Status is: {{ charity.statecode.label }} ---------------------------------
+    Your Query String is: {{request.url}}--------------------
+
+    {% assign entity_logical_name = 'crs_commercialcoventurereport' %}
+    {% assign coventurereport = entities[entity_logical_name][request.params.ref2id] %}---------------------------------
+    Commercial Coventure Report id is: {{coventurereport.id}}---------------------------------
+    Commercial Coventure Report Name is: {{coventurereport.crs_coventurecontract}}---------------------------------
+    Commercial Coventure Report Status Value is: {{coventurereport.crs_contractreportstate.value}}---------------------------------
+    Commercial Coventure Report Status Label is: {{coventurereport.crs_contractreportstate.label}}---------------------------------
+
+    {%comment%} Display the View Coventure Contract Webform if the stats us Approved or In-Process  or Denied {%endcomment%}
+    {%if coventurereport.crs_contractreportstate.value == 170960001 or coventurereport.crs_contractreportstate.value == 170960004 or coventurereport.crs_contractreportstate.value == 170960002 %}
+
+        {% webform name: 'Portal-MCS-NPRP Co-Venture Report View' %}
+        <script> 
+          $("#crs_coventurebusinessname, #crs_addressline1, #crs_addressline2, #crs_city, #crs_zip, #crs_email, #crs_phonenumber").prop( "readonly", true );
+          $("#crs_state").attr("style", "pointer-events: none;");
+        </script> 
+
+    {%else%}
+
+        {% webform name: 'Portal-MCS-NPRP Co-Venture Report Edit' %}
+        <script> 
+          $("#crs_coventurebusinessname, #crs_addressline1, #crs_addressline2, #crs_city, #crs_zip, #crs_email, #crs_phonenumber ").prop( "readonly", true );
+          $("#crs_state").attr("style", "pointer-events: none;");
+        </script> 
+
+    {%endif%}
+
+
+
+{%endif%}
+

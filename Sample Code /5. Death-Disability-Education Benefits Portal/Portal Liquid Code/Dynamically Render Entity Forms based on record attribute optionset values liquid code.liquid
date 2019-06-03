@@ -1,0 +1,39 @@
+{% comment %}*****************************Example of how to load any CRM entity by ID*******************************
+{% assign account = entities.account['936DA01F-9ABD-4d9d-80C7-02AF85C822A8'] %}
+{% if account %}
+{{ account.name }} ({{ account.statecode.label }})
+{% endif %}
+{% assign entity_logical_name = 'contact' %}
+{% assign contact = entities[entity_logical_name][request.params.contactid] %}
+{% if contact %}
+{{ contact.fullname }} ({{ contact.portalcustomerid.name }})
+{% endif %}
+{% endcomment %}
+
+{% comment %}*****************************Get the Application entity object and assign ID parameter*******************************{% endcomment %}
+{% assign application = entities.gnext_application['b975E15A5-7BEF-4104-A53A-38B7B7B64028'] %}
+{% assign id = request.params['id'] %}
+{% if application %}
+{{ application.gnext_name }} ({{ application.statecode.label }})
+  {% comment %}******This is The Control Flow Logic To surface the appropriate entity form based on the application field value of that application record*********
+  **************************************************************************************************************************************************{% endcomment%}
+  {% comment %} If the Application Type is Death AND The Applicant Type is Authorized Rep then surface The AOBO Death App Entity Form {% endcomment %}
+  {% if application.gnext_applicationtype.value == 4197000000 and application.gnext_applicanttype.value == 4197000001 %}
+      {% entityform name: 'AOBO Death  Application View Form' %}
+
+  {% comment %} If the Application Type is Disability AND The Applicant Type is Authorized Rep then surface The AOBO Death App Entity Form {% endcomment %}
+  {% elsif application.gnext_applicationtype.value == 4197000001 and application.gnext_applicanttype.value == 4197000001 %}
+      {% entityform name: 'AOBO Disability  Application View Form' %}
+
+  {% comment %} Just Display the default baseline entity form {% endcomment %}
+  {% else %}
+      {% entityform name: 'Submitted Applications' %}
+  {% endif %}
+
+{% endif %}
+
+
+
+{% comment %}********This snippet of code simply just loads a hard coded entity form ************
+{% entityform name: 'AOBO Death  Application View Form' %}
+{% endcomment %}

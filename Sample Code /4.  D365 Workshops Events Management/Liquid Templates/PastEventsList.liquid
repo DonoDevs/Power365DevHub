@@ -1,0 +1,185 @@
+{% extends 'layout_1_column' %}
+{% block main %}
+
+{% assign eventDetails = sitemarkers["Past Event Details"] %}
+
+<div class="col-md-8"> 
+{% entitylist id:page.adx_entitylist.id %}
+  <div class="event-list-body">
+    {% entityview id:params.view, search:params.search, order:params.order, page:params.page, pagesize:params.pagesize, metafilter:params.mf %}
+      {% if entityview.records == empty %}
+        <div class="alert alert-info">
+            {% if entitylist.empty_list_text %}
+              <p>{{ entitylist.empty_list_text | escape }}</p>
+            {% else %}
+              <p>No items matching your selected criteria were found.</p>
+            {% endif %}
+        </div>
+      {% else %}
+        {% for event in entityview.records %}
+          <div class="media">
+            <div class="media-left jumbotron-icon">
+              <span class="fa fa-calendar fa-2"></span>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="{{ eventDetails.url }}?id={{event.id}}">{{event.props_name}}</a></h4>
+              {%comment%}<p class="event-speaker">Speaker: <span class="event-speaker">{{event.mgs_eventspeakerid.name}}</span>  </p> {%endcomment%}
+              <p class="event-dates-location"> <font color="#2f5fef"><b><u>Start Date:</u></b></font>   <time datetime="{{event.props_eventstartdate | date_to_iso8601}}"></time> | <font color="#2f5fef"><b><u>End Date:</u></b></font>   <time datetime="{{event.props_eventenddate | date_to_iso8601}}"></time>  <br> <font color="#2f5fef"><b><u>Location:</u></b></font>   <span class="event-location">{{event.props_eventlocation}}</span></p>
+              <div class="event-summary">
+                {%comment%}<p>{{event.props_eventsummary}}</p>{%endcomment%}
+                <section class= "Events-summary-Rich-Text">
+                {%include 'Events Summary Rich Text'%}
+                </section>
+                {%comment%}
+                <textarea name="ctl00$ContentContainer$EntityFormControl_42af9745eb9fe811a974000d3a1bee29$EntityFormControl_42af9745eb9fe811a974000d3a1bee29_EntityFormView$props_eventsummary" rows="13" cols="20" id="props_eventsummary" class="textarea form-control " onchange="setIsDirty(this.id);" readonly="readonly" onkeydown="javascript:return LimitInput(this, event);" oninput="javascript:return LimitInput(this, event);" onpaste="javascript:return LimitPaste(this, event);">{{event.props_eventsummary}}
+                </textarea>
+                {%endcomment%}
+              </div>
+              <div>
+              </div>
+              <div class="event-actions">
+                 {% if event.mgs_recordingposted | false  %} 
+                  <a href="{{event.mgs_recordingurl}}" target="_blank" class="btn btn-success btn-sm">
+                    <span class="fa fa-video-camera"></span>&nbsp;
+                    Download Recording
+                  </a>
+                 {% endif %} 
+                {% if now < event.props_eventstartdate %}
+                  
+                  <a href="{{ eventDetails.url }}?id={{event.id}}" target="_blank" class="btn btn-primary btn-sm">
+                    <span class="fa fa-calendar"></span>&nbsp;
+                    Join event
+                  </a>
+                {% endif %}                
+                {% if now < event.props_eventstartdate %}
+                  {% assign iCal = sitemarkers["XRM iCal"] %}
+                  <a href="{{iCal.Url}}?id={{event.id}}" target="_blank" class="btn btn-default btn-sm">
+                    <span class="fa fa-calendar-plus-o"></span>&nbsp;
+                    Add to Calendar
+                  </a>
+                {% endif %}
+                {% if now > event.props_eventenddate %}
+                  <a  class="btn btn-primary btn-large"style="background:red " >
+                  
+                  <span class="fa fa-times-circle"></span>&nbsp;
+                    Registration Closed. Workshop Session Over
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <hr/>
+        {% endfor %}
+      {% endif %}
+      {% if entityview.pages.size > 0 %}
+      {% assign first_page = entityview.first_page %}
+      {% assign last_page = entityview.last_page %}
+      {% assign page_offset = entityview.page | minus:1 | divided_by:10 | times:10 %}
+      {% assign page_slice_first_page = page_offset | plus:1 %}
+      {% assign page_slice_last_page = page_offset | plus:10 %}
+
+      <ul class="pagination">
+        <li {% unless first_page and entityview.page > 1 %}class="disabled"{% endunless %}>
+          <a
+            {% if first_page and entityview.page > 1 %}
+              href="{{ request.url | add_query:'page', first_page | path_and_query }}"
+            {% endif %}>
+            &laquo;
+          </a>
+        </li>
+
+        <li {% unless entityview.previous_page %}class="disabled"{% endunless %}>
+          <a
+            {% if entityview.previous_page %}
+              href="{{ request.url | add_query:'page', entityview.previous_page | path_and_query }}"
+            {% endif %}>
+            &lsaquo;
+          </a>
+        </li>
+
+        {% if page_slice_first_page > 1 %}
+          {% assign previous_slice_last_page = page_slice_first_page | minus:1 %}
+          <li>
+            <a href="{{ request.url | add_query:'page', previous_slice_last_page | path_and_query }}">
+              &hellip;
+            </a>
+          </li>
+        {% endif %}
+
+        {% for page in entityview.pages offset:page_offset limit:10 -%}
+          <li{% if page == entityview.page %} class="active"{% endif %}>
+            <a href="{{ request.url | add_query:'page', page | path_and_query }}">
+              {{ page }}
+            </a>
+          </li>
+        {% endfor -%}
+
+        {% if page_slice_last_page < entityview.pages.size %}
+          {% assign next_slice_first_page = page_slice_last_page | plus:1 %}
+          <li>
+            <a href="{{ request.url | add_query:'page', next_slice_first_page | path_and_query }}">
+              &hellip;
+            </a>
+          </li>
+        {% endif %}
+
+        <li {% unless entityview.next_page %}class="disabled"{% endunless %}>
+          <a
+            {% if entityview.next_page %}
+              href="{{ request.url | add_query:'page', entityview.next_page | path_and_query }}"
+            {% endif %}>
+            &rsaquo;
+          </a>
+        </li>
+
+        <li {% unless last_page and entityview.page < last_page %}class="disabled"{% endunless %}>
+          <a
+            {% if last_page and entityview.page < last_page %}
+              href="{{ request.url | add_query:'page', last_page | path_and_query }}"
+            {% endif %}>
+            &raquo;
+          </a>
+        </li>
+      </ul>
+
+    {% endif %}
+    
+  {% endentityview %}
+  </div> 
+{% endentitylist %}
+</div>
+<div class="col-md-4">
+   <div class="well well-sm" id="event-feedback">
+      <h4>Dynamics 365 Workshop Request?</h4>
+      <p>
+         {%comment%}<a class="btn btn-success btn-lg btn-block" href="" >Leave Feedback</a>{%endcomment%}
+         <a href="/event-request" class="btn btn-primary btn-lg btn-block " title="Click here to request a Dynamics 365 Workshop Request ">Workshop Request</a>
+      </p>
+  </div>
+</div>
+
+{% endblock %}
+
+{%comment%}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eee;
+    color: #000;
+    opacity: 1;
+    border-style: solid;
+    border-color: #0b80d0;
+    border-width: medium;
+}
+
+.event-actions {
+    padding: 5px;
+}
+
+.events-summary-rich-text {
+    border-style: solid;
+    border-color: #0b80d0;
+    background-color: #eee;
+    height: 300px;
+    overflow-y: auto;
+    font-family: sans-serif;
+}
+{%endcomment%}

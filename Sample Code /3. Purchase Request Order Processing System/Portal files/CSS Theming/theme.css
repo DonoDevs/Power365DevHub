@@ -1,0 +1,1216 @@
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/* line 19, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+h1.underline, h4.underline {
+    border-bottom: 1px solid #bcbcbc;
+    padding-bottom: 21px; }
+  
+  @media (max-width: 767px) {
+    /* line 28, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .text_center-mobile {
+      text-align: center; } }
+  
+  /* line 34, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .btn-lg-home {
+    padding: 20px 40px;
+    font-size: 15px; }
+  
+  /* line 39, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .btn-info-home {
+    color: #fff;
+    border-color: #fff;
+    background: transparent; }
+    /* line 44, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .btn-info-home:hover {
+      color: #000;
+      border-color: #000;
+      background: #fff; }
+    /* line 49, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .btn-info-home:active {
+      color: #000;
+      border-color: #000;
+      background: #fff; }
+    /* line 54, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .btn-info-home:focus {
+      color: #000;
+      border-color: #000;
+      background: #fff; }
+  
+  /* line 67, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .breadcrumb > li a, .breadcrumb > li a:hover {
+    text-decoration: none;
+    color: #666666; }
+  
+  /* line 73, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .breadcrumb > .active {
+    font-weight: bold; }
+  
+  /* line 85, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .pagination > li > a,
+  .pagination > li > span {
+    background-color: transparent;
+    border: 0px;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center; }
+  
+  /* line 96, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .pagination > li:first-child > a:hover,
+  .pagination > li:first-child > span:hover {
+    background: none; }
+  
+  /* line 103, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .pagination > li:last-child > a:hover,
+  .pagination > li:last-child > span:hover {
+    background: none; }
+  
+  /* line 112, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .pagination > li > a:hover,
+  .pagination > li > a:focus,
+  .pagination > li > span:hover,
+  .pagination > li > span:focus {
+    background-color: transparent;
+    border-color: transparent; }
+  
+  /* line 122, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .pagination > .active > a,
+  .pagination > .active > a:hover,
+  .pagination > .active > a:focus,
+  .pagination > .active > span,
+  .pagination > .active > span:hover,
+  .pagination > .active > span:focus {
+    border-color: transparent;
+    border-radius: 50%; }
+  
+  /* line 132, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top {
+    border-width: 0; }
+  
+  /* line 136, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top {
+    border-width: 0;
+    margin-bottom: 0; }
+  
+  /* line 140, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-default {
+    border-color: transparent; }
+  
+  /* line 144, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .homelink, a.homelink:hover {
+    color: #fff;
+    text-decoration: none; }
+  
+  /* line 149, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .register-bar {
+    clear: both; }
+  
+  /* line 153, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top.navbar {
+    min-height: 67px; }
+    /* line 156, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-fixed-top.navbar .navbar-collapse {
+      max-height: 510px;
+      box-shadow: none;
+      border-top: none;
+      padding-top: 8px; }
+    /* line 163, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-fixed-top.navbar .navbar-form {
+      border: none;
+      margin-left: 0;
+      margin-right: 0; }
+      /* line 168, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .navbar-fixed-top.navbar .navbar-form .form-control {
+        font-size: 1em; }
+  
+  /* line 173, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top.navbar {
+    min-height: 67px; }
+    /* line 176, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-static-top.navbar .navbar-collapse {
+      max-height: 510px;
+      box-shadow: none;
+      border-top: none;
+      padding-top: 8px; }
+    /* line 183, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-static-top.navbar .navbar-form {
+      border: none;
+      margin-left: 0;
+      margin-right: 0; }
+      /* line 188, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .navbar-static-top.navbar .navbar-form .form-control {
+        font-size: 1em; }
+  
+  @media (min-width: 992px) {
+    /* line 193, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .fix-navbar .register-bar {
+      display: none; } }
+  
+  /* line 199, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top.navbar > .container > .row > div {
+    float: none !important;
+    display: inline-block;
+    vertical-align: bottom; }
+  
+  /* line 204, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top.navbar > .container > .row > div {
+    float: none !important;
+    display: inline-block;
+    vertical-align: bottom; }
+  
+  /* line 213, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top.navbar .menu-bar > .navbar-nav > li > a {
+    font-family: "Segoe UI Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold; }
+  
+  /* line 220, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top.navbar .menu-bar > .navbar-nav > .divider-vertical {
+    height: 21px;
+    margin: 0 4px;
+    margin-top: 14.5px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #666; }
+  
+  /* line 232, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top.navbar .menu-bar > .navbar-nav > li > a {
+    font-family: "Segoe UI Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: bold; }
+  
+  /* line 239, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top.navbar .menu-bar > .navbar-nav > .divider-vertical {
+    height: 21px;
+    margin: 0 4px;
+    margin-top: 14.5px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #666; }
+  
+  /* line 249, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top .navbar-brand {
+    font-size: 2.11em;
+    font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #232222;
+    position: relative; }
+    @media (max-width: 1200px) {
+      /* line 249, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .navbar-fixed-top .navbar-brand {
+        position: initial;
+        height: 42px; } }
+  
+  /* line 261, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top .navbar-header {
+    padding-top: 8px; }
+  
+  /* line 266, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top .navbar-brand {
+    font-size: 2.11em;
+    font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #232222;
+    position: relative; }
+    @media (max-width: 1200px) {
+      /* line 266, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .navbar-static-top .navbar-brand {
+        position: initial;
+        height: 42px; } }
+  
+  /* line 278, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top .navbar-header {
+    padding-top: 8px; }
+  
+  /* line 287, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-fixed-top.navbar-inverse {
+    background-color: #232222;
+    border-color: transparent; }
+    /* line 291, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-fixed-top.navbar-inverse .navbar-brand {
+      color: #fff; }
+    /* line 294, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-fixed-top.navbar-inverse .divider-vertical {
+      border-right-color: #fff;
+      border-left-color: #111; }
+  
+  /* line 299, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-static-top.navbar-inverse {
+    background-color: #232222;
+    border-color: transparent; }
+    /* line 303, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-static-top.navbar-inverse .navbar-brand {
+      color: #fff; }
+    /* line 307, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-static-top.navbar-inverse .divider-vertical {
+      border-right-color: #fff;
+      border-left-color: #111; }
+  
+  /* line 314, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff; }
+    /* line 317, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+      color: #36F;
+      background-color: transparent; }
+  
+  /* line 325, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .menu-bar .shopping_link {
+    position: relative; }
+    /* line 328, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .menu-bar .shopping_link .cart_amount {
+      border-radius: 100%;
+      height: 17px;
+      width: 17px;
+      position: absolute;
+      bottom: 6px;
+      right: -6px;
+      background-color: #36F;
+      text-align: -webkit-center;
+      line-height: 17px;
+      font-size: 9px;
+      padding-left: 1.9px;
+      color: #fff; }
+      /* line 342, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .menu-bar .shopping_link .cart_amount:hover {
+        color: #fff; }
+  
+  @media (max-width: 1199px) {
+    /* line 350, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-fixed-top .navbar-collapse .nav > .divider-vertical {
+      display: none; } }
+  
+  @media (max-width: 1199px) {
+    /* line 355, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-static-top .navbar-collapse .nav > .divider-vertical {
+      display: none; } }
+  
+  @media (max-width: 767px) {
+    /* line 360, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-fixed-top.navbar > .container > .row > div {
+      display: block; }
+    /* line 364, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-header {
+      position: relative; } }
+  
+  @media (max-width: 767px) {
+    /* line 369, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-static-top.navbar > .container > .row > div {
+      display: block; }
+    /* line 373, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-header {
+      position: relative; } }
+  
+  /* line 380, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .panel {
+    -webkit-box-shadow: 0 0px 0px transparent;
+    box-shadow: 0 0px 0px transparent; }
+  
+  /* line 387, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .panel-group {
+    margin-bottom: 21px; }
+    /* line 390, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .panel-group.border-bottom {
+      border-bottom: 1px solid #bcbcbc;
+      padding-bottom: 84px; }
+    /* line 395, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .panel-group .panel {
+      border-radius: 0px;
+      border: none;
+      box-shadow: none; }
+      /* line 400, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .panel-group .panel + .panel {
+        margin-top: 5px; }
+    /* line 405, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .panel-group .panel-heading {
+      border-bottom: 0; }
+      /* line 409, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .panel-group .panel-heading .panel-title a {
+        text-decoration: none; }
+        /* line 412, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .panel-group .panel-heading .panel-title a:hover {
+          color: #36F; }
+        /* line 416, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .panel-group .panel-heading .panel-title a:before {
+          content: ' ';
+          background-repeat: no-repeat;
+          display: inline-block;
+          width: 22px;
+          height: 12px;
+          background-position: -92px -5px;
+          margin-right: 10.5px; }
+        /* line 427, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .panel-group .panel-heading .panel-title a.collapsed:before {
+          background-position: -5px -126px; }
+      /* line 435, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .panel-group .panel-heading + .panel-collapse > .panel-body,
+      .panel-group .panel-heading + .panel-collapse > .list-group {
+        border-top: none; }
+    /* line 440, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .panel-group .panel-footer {
+      border-top: 0; }
+      /* line 443, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .panel-group .panel-footer + .panel-collapse .panel-body {
+        border-bottom: none; }
+    /* line 448, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .panel-group .panel-default {
+      border-color: none; }
+      /* line 6, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/mixins/panels.scss */
+      .panel-group .panel-default > .panel-heading {
+        color: #333333;
+        background-color: transparent;
+        border-color: none; }
+        /* line 11, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/mixins/panels.scss */
+        .panel-group .panel-default > .panel-heading + .panel-collapse > .panel-body {
+          border-top-color: none; }
+        /* line 14, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/mixins/panels.scss */
+        .panel-group .panel-default > .panel-heading .badge {
+          color: transparent;
+          background-color: #333333; }
+      /* line 20, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/mixins/panels.scss */
+      .panel-group .panel-default > .panel-footer + .panel-collapse > .panel-body {
+        border-bottom-color: none; }
+  
+  /* line 456, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  body {
+    padding-top: 0px; }
+    @media (max-width: 767px) {
+      /* line 456, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      body {
+        padding-top: 0px; } }
+  
+  /* line 465, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .layer_down {
+    height: 50px;
+    background: url("layer_down.png") no-repeat bottom center;
+    position: absolute;
+    bottom: 0;
+    z-index: 900;
+    width: 100%; }
+  
+  /* line 474, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .layer_up {
+    height: 40px;
+    background: url("layer_up.png") no-repeat bottom center;
+    position: relative;
+    z-index: 20; }
+  
+  /* line 481, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-margin {
+    margin: 21px 0; }
+  
+  /* line 485, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .color-inverse {
+    color: #fff; }
+    /* line 488, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .color-inverse h1, .color-inverse h2, .color-inverse h3 {
+      color: #fff; }
+  
+  /* line 496, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-inline-search {
+    background: url("helpdesk.png") no-repeat;
+    background-size: cover; }
+    /* line 501, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .section-inline-search .row > div {
+      margin-top: 100px; }
+      /* line 504, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .section-inline-search .row > div h1 {
+        color: #fff; }
+        @media screen and (max-width: 600px) {
+          /* line 504, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+          .section-inline-search .row > div h1 {
+            font-size: 16vw; } }
+      /* line 514, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .section-inline-search .row > div .form-inline .form-group .input-group {
+        margin-right: 21px; }
+        /* line 517, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .section-inline-search .row > div .form-inline .form-group .input-group .input-group-addon {
+          background-color: #fff;
+          border-right: none; }
+        /* line 522, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .section-inline-search .row > div .form-inline .form-group .input-group .form-control {
+          height: 60px;
+          border-left: none;
+          box-shadow: none; }
+          /* line 527, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+          .section-inline-search .row > div .form-inline .form-group .input-group .form-control:focus {
+            box-shadow: none;
+            border-right: none;
+            border-color: #ccc; }
+  
+  /* line 540, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    -moz-transition: width 0.3s ease-out;
+    -o-transition: width 0.3s ease-out;
+    -webkit-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out; }
+  
+  /* line 550, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .wrapper .contained {
+    position: relative;
+    height: 400px;
+    padding-bottom: 56.25%; }
+  
+  /* line 556, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .wrapper .contained > svg {
+    margin-top: -100px;
+    position: absolute;
+    display: block; }
+  
+  /* line 562, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .contained .row {
+    margin-top: 80px; }
+  
+  /* line 566, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  footer {
+    position: relative;
+    color: #AAAAAA; }
+    /* line 570, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    footer .footer-top {
+      width: 100%;
+      min-height: 130px;
+      background-color: #232222;
+      display: flex;
+      align-items: center; }
+      /* line 577, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      footer .footer-top h3, footer .footer-top h4 {
+        color: #fff; }
+      /* line 581, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      footer .footer-top .list-social-links {
+        margin-top: 25px;
+        margin-bottom: 12.5px; }
+      @media screen and (max-width: 991px) {
+        /* line 588, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        footer .footer-top h3,
+        footer .footer-top .list-social-links {
+          text-align: center; } }
+    /* line 594, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    footer .footer-bottom {
+      width: 100%;
+      min-height: 36px;
+      background-color: #000;
+      font-size: 12px;
+      display: flex;
+      align-items: center; }
+      /* line 602, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      footer .footer-bottom p {
+        margin: 0; }
+      /* line 606, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      footer .footer-bottom h4 {
+        margin-top: 0;
+        color: #fff; }
+      /* line 611, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      footer .footer-bottom ul {
+        list-style-type: none;
+        margin: 0; }
+        /* line 621, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        footer .footer-bottom ul li a,
+        footer .footer-bottom ul li a:hover,
+        footer .footer-bottom ul li a:focus,
+        footer .footer-bottom ul li a:active,
+        footer .footer-bottom ul li a.active {
+          font-size: 15px;
+          color: #fff; }
+  
+  /* line 631, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .list-social-links {
+    list-style-type: none;
+    padding-left: 0; }
+    /* line 635, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .list-social-links li {
+      display: inline-block;
+      margin: 0 10px; }
+      /* line 644, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .list-social-links li a,
+      .list-social-links li a:hover,
+      .list-social-links li a:focus,
+      .list-social-links li a:active,
+      .list-social-links li a.active {
+        color: #fff; }
+  
+  @media screen and (max-width: 993px) {
+    /* line 652, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .section-landing h1 {
+      font-size: 65px; }
+    /* line 656, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .section-landing h2 {
+      letter-spacing: normal;
+      margin-left: -3px; } }
+  
+  /* line 662, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .user-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url("register_icon.png");
+    display: inline-block;
+    margin-right: 7px; }
+  
+  /* line 670, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .article-title-container {
+    border-top: solid 1px #bcbcbc;
+    border-bottom: solid 1px #bcbcbc;
+    padding-left: 15px;
+    padding-top: 28px;
+    padding-bottom: 28px; }
+  
+  /* line 678, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .article-title {
+    margin-left: -35px; }
+    /* line 681, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .article-title > span {
+      margin-left: 3px; }
+      /* line 684, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .article-title > span .article-author {
+        font-weight: bold;
+        color: #36F; }
+  
+  /* line 691, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .article-content {
+    margin-top: 15px; }
+    /* line 694, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .article-content > p {
+      text-align: justify; }
+  
+  @media screen and (max-width: 993px) {
+    /* line 700, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .article-title {
+      margin-left: 0;
+      text-align: center; }
+    /* line 705, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .article-author {
+      text-align: center; } }
+  
+  /* line 711, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-search .header-search {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    background-color: #eeeeee; }
+    /* line 717, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .section-search .header-search img {
+      max-width: 350px; }
+    @media screen and (max-width: 600px) {
+      /* line 721, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .section-search .header-search h1 {
+        font-size: 13vw; } }
+  
+  /* line 728, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-search .title-search {
+    font-size: 26px;
+    font-weight: bold; }
+  
+  /* line 733, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-search input {
+    border-style: none;
+    padding-left: 10px;
+    height: 60px; }
+  
+  /* line 741, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-search .media .media-left > img {
+    max-width: 240px; }
+  
+  /* line 746, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .section-search .media .media-body {
+    padding-left: 20px; }
+    /* line 749, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .section-search .media .media-body > a {
+      text-decoration: none;
+      font-weight: bold; }
+    /* line 754, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .section-search .media .media-body .media-heading {
+      margin-top: 5px;
+      margin-bottom: 20px; }
+  
+  /* line 763, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .cards-container {
+    margin-top: 84px;
+    display: flex;
+    justify-content: center; }
+    @media screen and (max-width: 991px) {
+      /* line 763, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .cards-container {
+        flex-direction: column; } }
+  
+  /* line 778, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .carousel-custom .carousel-inner > .item {
+    margin-right: auto;
+    margin-left: auto; }
+    /* line 782, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .carousel-custom .carousel-inner > .item .carousel-caption {
+      display: flex;
+      align-items: center;
+      top: 5%;
+      left: 5%;
+      right: 5%; }
+      @media screen and (min-width: 768px) {
+        /* line 782, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .carousel-custom .carousel-inner > .item .carousel-caption {
+          left: 5%;
+          right: 5%; } }
+  
+  /* line 798, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .carousel-custom .carousel-indicators li {
+    border-color: #232222; }
+  
+  /* line 807, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .table.table-forms td {
+    padding: 15px 8px; }
+  
+  /* line 813, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .table.table-forms tbody tr:first-child td {
+    border-top: none; }
+  
+  /* line 822, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .poll {
+    height: 400px;
+    background-color: #eeeeee;
+    border-top: 7px solid #0b80d0;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px; }
+    /* line 830, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .poll .poll-header {
+      display: flex;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #bcbcbc;
+      padding-bottom: 5px; }
+      /* line 840, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .poll .poll-header h4 {
+        font-weight: bold;
+        display: inline-block; }
+    /* line 846, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .poll .poll-content {
+      padding-top: 25px; }
+      /* line 849, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .poll .poll-content p {
+        font-size: 14px; }
+      /* line 853, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .poll .poll-content form {
+        border-bottom: 1px solid #bcbcbc;
+        padding-bottom: 10px; }
+      /* line 858, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .poll .poll-content .poll-buttons {
+        padding-top: 20px;
+        padding-left: 11px; }
+        /* line 862, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .poll .poll-content .poll-buttons .btn {
+          padding: 4px 14px;
+          font-size: 14px; }
+        /* line 867, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+        .poll .poll-content .poll-buttons .btn-default {
+          color: #000;
+          border-color: #000; }
+          /* line 871, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+          .poll .poll-content .poll-buttons .btn-default:hover {
+            color: #000;
+            border-color: #000; }
+    /* line 879, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .poll .poll-tags {
+      padding-top: 10px; }
+      /* line 882, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .poll .poll-tags h4 {
+        border-bottom: 1px solid #bcbcbc;
+        padding-bottom: 10px; }
+      /* line 887, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .poll .poll-tags .tag {
+        display: inline-block;
+        background-color: #e1e1e1;
+        color: #232222;
+        padding: 5px 14px;
+        margin: 5px 0px;
+        text-transform: uppercase;
+        font-size: 13px; }
+  
+  /* line 899, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .nav-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    /* line 906, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav > li > a {
+      padding: 4px 20px;
+      color: #36F;
+      border-right: 2px solid #eeeeee; }
+      /* line 912, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .nav-sidebar .nav > li > a:hover,
+      .nav-sidebar .nav > li > a:focus {
+        color: #232222;
+        text-decoration: none;
+        background-color: transparent;
+        border-right: 2px solid #555555; }
+      /* line 919, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .nav-sidebar .nav > li > a:before {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e250";
+        margin-right: 7px; }
+    /* line 936, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav > .active > a {
+      color: #232222;
+      text-decoration: none;
+      background-color: transparent;
+      border-right: 2px solid #555555;
+      font-weight: bold; }
+      /* line 943, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .nav-sidebar .nav > .active > a:before {
+        content: "\e252"; }
+    /* line 950, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav > .active:hover > a,
+    .nav-sidebar .nav > .activefocus > a {
+      font-weight: bold; }
+    /* line 956, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav > .active > ul.nav {
+      display: block; }
+    /* line 963, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav ul.nav {
+      display: none; }
+    /* line 970, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav .nav > li > a {
+      padding-top: 1px;
+      padding-bottom: 1px;
+      padding-left: 30px; }
+    /* line 980, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav .nav > .active,
+    .nav-sidebar .nav .nav > .active:hover,
+    .nav-sidebar .nav .nav > .active:focus {
+      font-weight: bold; }
+    /* line 987, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav .nav .nav > li > a {
+      padding-top: 1px;
+      padding-bottom: 1px;
+      padding-left: 60px; }
+      /* line 992, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      .nav-sidebar .nav .nav .nav > li > a:before {
+        content: ""; }
+    /* line 1001, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .nav-sidebar .nav .nav .nav > .active,
+    .nav-sidebar .nav .nav .nav > .active:hover,
+    .nav-sidebar .nav .nav .nav > .active:focus {
+      font-weight: bold; }
+  
+  /* line 1012, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  #navbar .dropdown-menu {
+    margin-top: 8px; }
+  
+  /* line 1016, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  #navbar .dropdown-search {
+    padding-top: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    margin: 9px; }
+    /* line 1023, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    #navbar .dropdown-search #q {
+      min-width: 200px; }
+    @media (max-width: 1199px) {
+      /* line 1028, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      #navbar .dropdown-search .input-group-btn {
+        vertical-align: top; }
+      /* line 1031, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      #navbar .dropdown-search #search-filter {
+        width: 100%;
+        text-align: left;
+        padding-left: 25px; }
+      /* line 1036, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+      #navbar .dropdown-search.dropdown-menu > li:hover, #navbar .dropdown-search .dropdown-menu > li:hover {
+        color: white;
+        background-color: transparent; } }
+  
+  /* line 1044, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .tabs-header {
+    padding-bottom: 9.5px;
+    margin: 42px 0 21px; }
+  
+  /* line 1057, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+  .help-block.error,
+  label.control-label.required:before,
+  .crmEntityFormView .cell div.info.required label:after,
+  .crmEntityFormView .cell div.info div.validators,
+  .crmEntityFormView .validator-text,
+  .crmEntityFormView .rank-order-cell .validator-text,
+  .crmEntityFormView .constant-sum-cell .validator-text,
+  .crmEntityFormView .stack-rank-cell .validator-text {
+    color: #a94442; }
+  
+  @media screen and (-ms-high-contrast: active) {
+    /* line 1062, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #888; }
+    /* line 1066, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/theme/bootstrap/theme.scss */
+    .navbar-inverse .navbar-toggle .icon-bar {
+      background-color: #fff; } }
+  
+  /* line 13, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .no-lr-margins {
+    margin-left: 0;
+    margin-right: 0; }
+  
+  /* line 20, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .btn-default-black {
+    color: black;
+    border-color: black; }
+    /* line 24, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .btn-default-black:hover {
+      color: black;
+      border-color: black;
+      background: #36F; }
+  
+  /* line 33, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .blue_border {
+    padding-bottom: 10px;
+    border-bottom: 7px solid #0b80d0; }
+  
+  /* line 38, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .page_section {
+    position: relative;
+    background-size: cover;
+    color: #000; }
+    /* line 43, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section .row {
+      padding-top: 25px;
+      padding-bottom: 100px; }
+    /* line 48, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section .row.sidebar-home {
+      padding-bottom: 0; }
+    /* line 52, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section h1 {
+      font-size: 71px; }
+    /* line 56, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section h2 {
+      color: #666666;
+      font-size: 40px; }
+    /* line 61, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section h3 {
+      font-size: 66px;
+      font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    /* line 66, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section p {
+      border-top: solid #666666 1px;
+      padding-top: 5px; }
+    /* line 71, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section .btn {
+      margin-top: 50px; }
+    /* line 75, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section .form-search .btn {
+      margin-top: 0; }
+    /* line 81, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .page_section .section-landing-heading p,
+    .page_section .section-landing-sub-heading p {
+      border-top: 0; }
+  
+  /* line 88, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .form-search .btn {
+    border: 1px solid #ccc; }
+  
+  /* line 91, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .form-search .btn-default:hover {
+    border-color: #ccc; }
+  
+  /* line 95, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .form-search .dropdown-submenu {
+    right: -2px; }
+  
+  /* line 99, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .form-search .dropdown-menu {
+    margin-top: 0px; }
+  
+  /* line 104, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .dropdown-search.dropdown-menu > li:hover {
+    background-color: transparent; }
+  
+  /* line 108, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  #navbar .form-search .dropdown-menu {
+    margin-top: 0px; }
+  
+  /* line 112, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-diagonal-left {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    overflow: hidden;
+    margin-top: -60px;
+    margin-bottom: -20px; }
+    /* line 120, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .section-diagonal-left .section-diagonal-left-content {
+      -webkit-transform: skew(0deg, 1.3deg);
+      -ms-transform: skew(0deg, 1.3deg);
+      transform: skew(0deg, 1.3deg);
+      background: url("homethumbnail2.jpg") no-repeat 0 20%;
+      background-size: cover;
+      margin-top: -70px; }
+      /* line 128, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .section-diagonal-left .section-diagonal-left-content:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .2;
+        z-index: -1;
+        background-color: #fff; }
+  
+  /* line 142, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-diagonal-right {
+    -webkit-transform: skew(0deg, 1.3deg);
+    -ms-transform: skew(0deg, 1.3deg);
+    transform: skew(0deg, 1.3deg);
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: -20px; }
+    /* line 150, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .section-diagonal-right.home-section {
+      margin-top: -60px; }
+    /* line 154, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .section-diagonal-right .section-diagonal-right-content {
+      -webkit-transform: skew(0deg, -1.3deg);
+      -ms-transform: skew(0deg, -1.3deg);
+      transform: skew(0deg, -1.3deg);
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("homethumbnail4.jpg") no-repeat;
+      background-size: cover;
+      margin-top: -70px; }
+      /* line 162, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .section-diagonal-right .section-diagonal-right-content:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .8;
+        z-index: -1;
+        background-color: #36F; }
+  
+  /* line 178, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-diagonal-left .row,
+  .section-diagonal-right .row {
+    padding-top: 125px; }
+  
+  /* line 182, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-diagonal-left .col-md-5,
+  .section-diagonal-right .col-md-5 {
+    float: none;
+    margin: 0 auto; }
+  
+  /* line 187, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-diagonal-left p,
+  .section-diagonal-right p {
+    border-top: none; }
+  
+  /* line 193, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("homehero.jpg") no-repeat center;
+    background-size: cover; }
+    /* line 198, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .section-landing .row > div {
+      margin-top: 80px; }
+      /* line 201, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .section-landing .row > div .section-landing-heading {
+        font-size: 8rem;
+        color: #fff;
+        text-transform: uppercase; }
+        @media screen and (max-width: 600px) {
+          /* line 201, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+          .section-landing .row > div .section-landing-heading {
+            font-size: 16vw; } }
+      /* line 211, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .section-landing .row > div .section-landing-sub-heading {
+        margin-top: 0;
+        margin-bottom: 50px;
+        font-size: 4.3rem;
+        color: #fff;
+        letter-spacing: 19px;
+        text-transform: uppercase; }
+        @media screen and (max-width: 600px) {
+          /* line 211, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+          .section-landing .row > div .section-landing-sub-heading {
+            font-size: 4vw; } }
+  
+  /* line 227, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-sub-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #07aaf6), url("homethumbnail1.jpg") no-repeat center;
+    background-size: cover; }
+  
+  /* line 232, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-default {
+    background: url("homethumbnail3.jpg") no-repeat center;
+    background-size: cover; }
+    @media screen and (max-width: 767px) {
+      /* line 237, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .section-default:before {
+        content: " ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.59) 41%, rgba(0, 0, 0, 0.62) 43%, black 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.59) 41%, rgba(0, 0, 0, 0.62) 43%, black 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.59) 41%, rgba(0, 0, 0, 0.62) 43%, black 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+        /* IE6-9 */ } }
+    /* line 252, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .section-default .row {
+      padding-bottom: 150px; }
+  
+  /* line 259, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-knowledge {
+    margin-bottom: 40px; }
+  
+  /* line 264, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .btn {
+    margin-top: 0; }
+  
+  /* line 268, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .panel {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none; }
+    /* line 273, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .content-home .panel p {
+      border: 0; }
+  
+  /* line 278, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .panel-heading {
+    display: none; }
+  
+  /* line 282, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .list-group-item {
+    padding: 20px 0;
+    font-size: 20px;
+    background-color: transparent;
+    border: 0;
+    border-top: 1px solid #ddd; }
+    /* line 289, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .content-home .list-group-item img {
+      margin-right: 25px; }
+  
+  /* line 295, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home a.list-group-item,
+  .content-home .list-group-item a.title {
+    color: #232222; }
+    /* line 299, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .content-home a.list-group-item:hover,
+    .content-home a.list-group-item:focus,
+    .content-home .list-group-item a.title:hover,
+    .content-home .list-group-item a.title:focus {
+      color: #232222;
+      text-decoration: underline;
+      background-color: transparent; }
+  
+  /* line 307, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .title,
+  .content-home .description {
+    display: block; }
+  
+  /* line 311, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .title {
+    font-size: 24px;
+    font-family: "Segoe UI Light", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  
+  /* line 316, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .content-home .description {
+    display: block;
+    font-size: 14px; }
+  
+  /* line 322, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .sidebar-home {
+    background-color: #eeeeee;
+    border-top: 7px solid #0b80d0;
+    margin-top: 36px;
+    position: relative; }
+    /* line 328, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .sidebar-home h3 {
+      font-size: 18px; }
+    /* line 332, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .sidebar-home .panel {
+      background-color: transparent;
+      border: 0;
+      box-shadow: none; }
+    /* line 338, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .sidebar-home .panel-heading {
+      padding-left: 0;
+      background-color: transparent;
+      border: 0; }
+    /* line 344, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .sidebar-home .panel-title {
+      font-size: 14px;
+      color: #36F;
+      font-family: "Segoe UI Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    /* line 350, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+    .sidebar-home .list-group-item {
+      padding-left: 0;
+      font-size: 14px;
+      background-color: transparent;
+      border: 0; }
+      /* line 357, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .sidebar-home .list-group-item:hover,
+      .sidebar-home .list-group-item:focus {
+        text-decoration: underline;
+        background-color: transparent; }
+      /* line 362, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+      .sidebar-home .list-group-item .date {
+        visibility: hidden; }
+  
+  /* line 368, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-landing-search {
+    min-height: 250px;
+    background: url(searchhero.jpg) no-repeat 0 25%;
+    background-size: cover; }
+  
+  /* line 374, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-landing-forums {
+    min-height: 250px;
+    background: url(forumhero.jpg) no-repeat center;
+    background-size: cover; }
+  
+  /* line 380, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .table.forums th:first-child, .table.forums tr td:first-child {
+    padding-left: 0px; }
+  
+  /* line 389, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .dropdown-toggle:focus {
+    border: 0 !important; }
+  
+  /* line 394, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-knowledge .list-group a.list-group-item {
+    color: #36F; }
+  
+  /* line 397, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .section-knowledge .panel-title {
+    color: #000; }
+  
+  /* line 402, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .page_section.section-landing .row {
+    padding-bottom: 60px; }
+  
+  /* line 405, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .page_section.section-landing .row > div {
+    margin-top: 0px; }
+  
+  /* line 408, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .list-group-item p {
+    margin-bottom: 0px; }
+  
+  /* line 412, E:/VSO_Agent_006/Work_06/1/s/Resources/Theme/ElectricBlueDesign/customer/theme.scss */
+  .page_section.section-sub-landing .row .btn-lg-home p {
+    border-top: none; }
+  
+  

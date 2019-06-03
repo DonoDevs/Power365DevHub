@@ -1,0 +1,14 @@
+{% case user.gnext_typeofuser_t_.label %} {%comment%}Grab the user object which references the contact id{%endcomment%}
+{% when 'Public Safety Agency Representative' %}  {%comment%}If PSA then show the appropriate HTML{%endcomment%}
+{% editable snippets "PSA Users" type: 'html' %}  {%comment%}Use the content snippet created to render the PSA user client side HTML{%endcomment%}
+{% when 'Applicant' %}  
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %}
+{% when 'Authorized/Designated Representative' %}  
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %}
+{% when 'Independent Medical Examiner' %}  
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %}
+{% when 'Court Reporter' %}  
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %} 
+{% else %}  
+Welcome to the PSOB Portal!  Please Register or sign in to access the benefits application!
+{% endcase %}  

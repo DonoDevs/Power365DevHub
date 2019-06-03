@@ -1,0 +1,54 @@
+{% assign meetingDetails = sitemarkers["Meeting Details"] %}
+ 
+{% entitylist id:page.adx_entitylist.id %}
+  <div class="meeting-list-body">
+    {% entityview id:params.view, search:params.search, order:params.order, page:params.page, pagesize:params.pagesize, metafilter:params.mf %}
+      {% if entityview.records == empty %}
+        <div class="alert alert-info">
+            {% if entitylist.empty_list_text %}
+              <p>{{ entitylist.empty_list_text | escape }}</p>
+            {% else %}
+              <p>No items matching your selected criteria were found.</p>
+            {% endif %}
+        </div>
+      {% else %}
+        {% for meeting in entityview.records %}
+          <div class="media">
+            <div class="media-left jumbotron-icon">
+              <span class="fa fa-calendar fa-2"></span>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="{{ meetingDetails.url }}?id={{meeting.id}}">{{meeting.xv_name}}</a></h4>
+              <p class="meeting-date">Speaker: <span class="meeting-speaker">{{meeting.xv_primaryspeakerid.name}}</span> | <time datetime="{{meeting.xv_starttime | date_to_iso8601}}"></time></p>
+              <div class="meeting-abstract">
+                <p>{{meeting.xv_abstract}}</p>
+              </div>
+              <div class="meeting-actions">
+                {% if meeting.xv_recordingposted | false and meeting.xv_recordingurl %}
+                  <a href="{{meeting.xv_recordingurl}}" target="_blank" class="btn btn-success btn-sm">
+                    <span class="fa fa-video-camera"></span>&nbsp;
+                    Download Recording
+                  </a>
+                {% endif %}
+                {% if now < meeting.xv_starttime and meeting.xv_meetingurl %}
+                  <a href="{{meeting.xv_meetingurl}}" target="_blank" class="btn btn-primary btn-sm">
+                    <span class="fa fa-calendar"></span>&nbsp;
+                    Join Meeting
+                  </a>
+                {% endif %}                
+                {% if now < meeting.xv_starttime %}
+                  {% assign iCal = sitemarkers["XRM iCal"] %}
+                  <a href="{{iCal.Url}}?id={{meeting.id}}" target="_blank" class="btn btn-default btn-sm">
+                    <span class="fa fa-calendar-plus-o"></span>&nbsp;
+                    Add to Calendar
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <hr/>
+        {% endfor %}
+      {% endif %}
+    {% endentityview %}
+  </div> 
+{% endentitylist %}

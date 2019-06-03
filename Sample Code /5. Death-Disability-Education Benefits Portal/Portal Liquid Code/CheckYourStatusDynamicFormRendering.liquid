@@ -1,0 +1,108 @@
+{% assign application = entities['gnext_application'][request.params.id] %} 
+{% if application %}
+{% comment %}******This is The Control Flow Logic To surface the appropriate entity form based on the application field value of that application record*********
+  **************************************************************************************************************************************************{% endcomment%}
+
+  {% comment %} If the Application Type is Death AND The Applicant Type is Authorized Rep then surface The AOBO Death App Entity Form {% endcomment %}
+  {% if application.gnext_applicationtype.label == 'Death' and application.gnext_applicanttype.label == 'Authorized Representative' %}
+      {% entityform name: 'AOBO Death  Application View Form' %}
+
+  {% comment %} If the Application Type is Disability AND The Applicant Type is Authorized Rep then surface The AOBO Death App Entity Form {% endcomment %}
+  {% elsif application.gnext_applicationtype.label == 'Disability' and application.gnext_applicanttype.label == 'Authorized Representative' %}
+      {% entityform name: 'AOBO Disability  Application View Form' %}
+
+  {% comment %} Just Display the default baseline entity form {% endcomment %}
+  {% else %}
+      {% entityform name: 'Submitted Applications' %}
+  {% endif %}
+
+{% endif %}
+
+
+
+
+Way 1: With if statements
+
+{% assign vehiclereport = entities['abt_vehiclereport'][request.params.id] %} 
+{% if vehiclereport %}
+{% comment %}******This is The Control Flow Logic To surface the appropriate entity form based on the vehicle report request type*********
+  **************************************************************************************************************************************************{% endcomment%}
+
+  {% comment %} {% endcomment %}
+  {% if vehiclereport.abt_requesttype.label == 'Status Change Request' %}
+      {% entityform name: 'Portal Status Change Request Form' %}
+
+  {% comment %}  {% endcomment %}
+  {% elsif vehiclereport.abt_requesttype.label == 'Status Update' %}
+      {% entityform name: 'Portal Status Update Form' %}
+
+  {% comment %}  {% endcomment %}
+  {% elsif vehiclereport.abt_requesttype.label == 'VIN Assignment' %}
+      {% entityform name: 'Portal VIN Assignment Form' %}
+
+  {% comment %}  {% endcomment %}
+  {% elsif vehiclereport.abt_requesttype.label == 'Vehicle Not Found in MOVES' %}
+      {% entityform name: 'Portal VIN not found form' %}
+  {% comment %}  {% endcomment %}
+  {% elsif vehiclereport.abt_requesttype.label == 'Small VIN' %}
+      {% entityform name: 'Portal Status Update Form' %}
+  {% comment %} Just Display the default baseline entity form {% endcomment %}
+  {% else %}
+      {% entityform name: 'Portal Status Update Form ' %}
+  {% endif %}
+
+{% endif %}
+
+
+Way 2: If statements with More simple logic because 3 use the portal status update form so you can just exit out with the else 
+
+{% assign vehiclereport = entities['abt_vehiclereport'][request.params.id] %} 
+{% if vehiclereport %}
+{% comment %}******This is The Control Flow Logic To surface the appropriate entity form based on the vehicle report request type*********
+  **************************************************************************************************************************************************{% endcomment%}
+
+  {% comment %} {% endcomment %}
+  {% if vehiclereport.abt_requesttype.label == 'Status Change Request' %}
+      {% entityform name: 'Portal Status Change Request Form' %}
+
+  {% comment %}  {% endcomment %}
+  {% elsif vehiclereport.abt_requesttype.label == 'VIN Assignment' %}
+      {% entityform name: 'Portal VIN Assignment Form' %}
+
+  {% comment %}  {% endcomment %}
+  {% elsif vehiclereport.abt_requesttype.label == 'Vehicle Not Found in MOVES' %}
+      {% entityform name: 'Portal VIN not found form' %}
+
+  {% comment %} Just Display the default Portal Status update form {% endcomment %}
+  {% else %}
+      {% entityform name: 'Portal Status Update Form ' %}
+  {% endif %}
+
+{% endif %}
+
+
+Way 3: Switch Statement
+
+{% assign vehiclereport = entities['abt_vehiclereport'][request.params.id] %} 
+{% if vehiclereport %}
+
+{% case vehiclereport.abt_requesttype.label %}
+{% when 'Status Change Request' %} 
+{% entityform name: 'Portal Status Change Request Form' %}
+{% when 'VIN Assignment' %} 
+{% entityform name: 'Portal VIN Assignment Form' %}
+{% when 'Vehicle Not Found in MOVES' %} 
+{% entityform name: 'Portal VIN not found form' %}
+{% else %}  
+{% entityform name: 'Portal Status Update Form ' %}
+{% endcase %}
+
+
+
+
+
+
+
+
+
+

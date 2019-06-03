@@ -1,0 +1,95 @@
+/*********CSS For the Navbar Right Image and Text positioning for Customer Self Service Portal****************************************/
+body > div.navbar.navbar-inverse.navbar-static-top > div > div.navbar-header{
+    position:relative;
+    margin-left:0px;
+    padding-bottom:25px;
+    margin-top:-20px;
+}
+
+
+ .navbar-header {
+        position: relative;
+        margin-left: 0px;
+        padding-bottom: 25px;
+        margin-top: -20px;
+}
+
+.navbar-static-top .navbar-header {
+    /* padding-top: 8px; */
+    position: relative;
+    margin-left: 0px;
+    padding-bottom: 25px;
+    margin-top: -20px;
+}
+/*********CSS for editing the background color of the main navigation bar for Customer Self Service Portal*******************************************/
+body > div.navbar.navbar-inverse.navbar-static-top {
+    background-color: #0b80d0;
+    border-color: transparent;
+}
+/*********CSS for the positioning of the Search bar and the size of the width of it for Customer Self Service Portal************************/
+form.form-search {
+    position: relative;
+    top: -350px;
+    font-size: 18px;
+    z-index: 1000;
+    right: -750px;
+    width: 400px;
+}
+/*********CSS for the First HomePage Main Landing Background Image for Customer Self Service Portal******************************/
+body > section.page_section.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(flowchart-white-boarding.jpg) no-repeat left,url(abstract-green-and-yellow.jpg) no-repeat center,url(group-looking-at-laptop.jpg) no-repeat right;
+    background-size: contain;
+}
+
+
+/*********CSS for the background color/image of the Most Popular Div for for Customer Self Service Portal***********************/
+body > section.page_section.section-knowledge {
+    background: url(lightbulb-hand.jpg) no-repeat left;
+    background-size: 1800px 900px;
+    background-position-y: center;
+    color: #000;
+}
+/*********CSS for the second image div background/color for the forums piece for Customer Self Service Portal****************************/
+body > section.page_section.section-sub-landing.color-inverse {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #07aaf6), url(website-whiteboarding.jpg) no-repeat left,url(business-team-table-meeting.jpg) no-repeat center, url(designer-at-desk.jpg) no-repeat right;
+    background-size: contain;
+}
+
+/*********CSS for the third image div bakground/color for the Get Help section for Customer Self Service Portal************************/
+
+#gethelp > div {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(abstract-green-yellow-red-orange.jpg) no-repeat;
+    background-size: 1800px 500px;
+    margin-top: 1px;
+}
+.section-diagonal-right .section-diagonal-right-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-color: transparent;
+}
+/*******CSS for the background color of the first footer div for Customer Self Service Portal***************************************************************/
+body > footer > div.footer-top.hidden-print {
+    width: 100%;
+    min-height: 130px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+/******CSS for the background color of the second footer div for Customer Self Service Portal****************************************************************/
+body > footer > div.footer-bottom.hidden-print {
+    width: 100%;
+    min-height: 36px;
+    background-color: #0b80d0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}

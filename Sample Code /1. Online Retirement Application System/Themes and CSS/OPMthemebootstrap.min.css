@@ -1,0 +1,9 @@
+.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(opm-buildingg.jpg) no-repeat center;
+    background-size: cover;
+}
+#navbar > div.navbar-right.menu-bar.xrm-entity.xrm-editable-adx_weblinkset {
+    position: relative;
+    left: 85px;
+    top: 25px;
+}

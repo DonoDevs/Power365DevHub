@@ -1,0 +1,61 @@
+{%comment%} 
+**********Note: Multiple Webpages can use the same web templates. There will be times where you need a certain 
+set of logic to nly run at certain points if you are at a certain web page. This field example shows how this can be done by checking the title of the page
+so that the liquid logic only runs if you are on the page necessary
+***********
+{%endcomment%}
+
+ {%comment%} This makes sure that the webforms fit into the screen and follow the same CSS rules always include this 
+ always include the {% extends 'layout_1_column' %} tag & {% block main %} tags if you plan on surfacing a web form or entity form
+ {%endcomment%}
+{% extends 'layout_1_column' %}
+{% block main %}
+{%comment%} Check to make sure the code block only runs for the Edit/View Complaints Web Page {%endcomment%}
+{%if page.title == 'Edit/View Complaint'%}
+
+    {%comment%} Creating a reference to the entity object so we cn grab the GUID of that record to access it's attributes {%endcomment%}
+    {%assign complaint = entities['its_complaint'][request.params.id]%}
+    
+    
+    {%comment%} Display the Edit  Complaint Webform if the stats Complaint Tracking Status is "Not submitted" or "More Information Needed" Else, Display the View Complaints {%endcomment%}
+    {%if complaint.its_complaintrecordstatus.value == 960760002 or complaint.its_complaintrecordstatus.value == 960760004 %}
+
+         {% webform name: 'Complaints - Edit' %}
+
+    {%else%}
+
+        {% webform name: 'Complaints - View' %}
+
+    {%endif%}
+{%endif%}
+
+{%if page.title == 'Upload Additional Complaint Documents'%}
+    {%assign complaint = entities['its_complaint'][request.params.id]%}
+
+    
+    {%comment%} Display the Upload Documents Webform Webform if the  Complaint Tracking Status is "Not submitted" or "More Information Needed" Else, Display The content snippet with a button to return back to the my complaints home page {%endcomment%}
+    
+    {%if complaint.its_complaintrecordstatus.value == 960760002 or complaint.its_complaintrecordstatus.value == 960760004 %}
+
+         {% webform name: 'Complaints - Upload Additional Documents' %}
+    {%else%}
+    
+        {% editable snippets "No Additional Documents Needed" type: 'html' %} 
+        
+    {%endif%}
+{%endif%}
+{%comment%} Check to make sure the code block only runs for the EYour Complaint has Been Submitted Successfully Web Page {%endcomment%}
+{%if page.title == 'Complaint Submitted' or  page.title == 'Your Complaint has Been Submitted Successfully'%}
+
+    
+    {%if user %}
+
+         {% editable snippets "Authenticated Complainants" type: 'html' %} 
+    {%else%}
+    
+        {% editable snippets "Anonymous Complainants" type: 'html' %} 
+        
+    {%endif%}
+{%endif%}
+
+{% endblock %}

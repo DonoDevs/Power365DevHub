@@ -1,0 +1,11 @@
+#EntityListControl > div > div > div.calendar.cal-context {
+    background: #2f5fef;
+    color: black;
+    border-style: solid;
+    border-color: #2f5fef;
+    transform: rotate3d;
+    transform: skew(1deg, 3deg);
+}
+.cal-day-today {
+    background-image: linear-gradient(10deg,#f65314 ,#00a1f1,#7cbb00,#ffbb00);
+}

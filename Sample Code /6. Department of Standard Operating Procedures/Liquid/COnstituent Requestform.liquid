@@ -1,0 +1,36 @@
+{% include "Layout 1 Column" %}
+{% block main %}
+
+{%assign request = entities['incident'][request.params.id]%}
+{%comment%}
+    portalApplicant id is: {{ portalApplicant.id }} ---------------------------------
+    portalApplicant firstname is: {{ portalApplicant.firstname }} ---------------------------------
+    portalApplicant middlename is: {{ portalApplicant.middlename }} ---------------------------------
+    portalApplicant lastname is: {{ portalApplicant.lastname }} ---------------------------------
+    portalApplicant entity logical name is: {{portalApplicant.logicalname}}----------------------
+    Your Query String is: {{request.url}}--------------------
+{%endcomment%}
+    
+    <script>
+           
+            var portalApplicantID = '{user.id}}'
+            var portalApplicantName = '{{user.fullname}}'
+            var portalApplicantEntityLogicalName = '{{user.logicalname}}'
+            var portalApplicantFirstname = '{{user.firstname}}'
+            var portalApplicantMiddlename = '{{user.middlename}}'
+            var portalApplicantLastname = '{{user.lastname}}'
+            
+
+            $(document).ready(function() {
+               $("#customerid").val(portalApplicantID);
+               $("#customerid_name").val(portalApplicantName);  
+               $("#customerid_entityname").val(portalApplicantEntityLogicalName);      
+            });
+    </script>    
+
+
+{% endblock %}
+
+
+#080747
+#EA1921

@@ -1,0 +1,40 @@
+{% include "Layout 1 Column" %}
+{% block main %}
+
+{%assign portalApplicant = entities['contact'][request.params.refid]%}
+{%comment%}
+    portalApplicant id is: {{ portalApplicant.id }} ---------------------------------
+    portalApplicant firstname is: {{ portalApplicant.firstname }} ---------------------------------
+    portalApplicant middlename is: {{ portalApplicant.middlename }} ---------------------------------
+    portalApplicant lastname is: {{ portalApplicant.lastname }} ---------------------------------
+    portalApplicant entity logical name is: {{portalApplicant.logicalname}}----------------------
+    Your Query String is: {{request.url}}--------------------
+{%endcomment%}
+    
+    <script>
+           
+            var portalApplicantID = '{{portalApplicant.id}}'
+            var portalApplicantName = '{{portalApplicant.fullname}}'
+            var portalApplicantEntityLogicalName = '{{portalApplicant.logicalname}}'
+            var portalApplicantFirstname = '{{portalApplicant.firstname}}'
+            var portalApplicantMiddlename = '{{portalApplicant.middlename}}'
+            var portalApplicantLastname = '{{portalApplicant.lastname}}'
+            var portalApplicantSSN = '{{portalApplicant.govmod_socialsecuritynumber}}'
+            var portalApplicantDOB = '{{portalApplicant.govmod_dateofbirth_description}}'
+
+            $(document).ready(function() {
+               $("#govmod_portalapplicantid").val(portalApplicantID);
+               $("#govmod_portalapplicantid_name").val(portalApplicantName);  
+               $("#govmod_portalapplicantid_entityname").val(portalApplicantEntityLogicalName);
+               $("#govmod_summaryofservicename").val(portalApplicantFirstname);
+               $("#govmod_summaryofservicessn").val(portalApplicantSSN);
+               $("#govmod_summaryofservicedateofbirth").val(portalApplicantDOB);
+
+               //$("#crs_coventurebusinessname, #crs_addressline1, #crs_addressline2, #crs_city, #crs_zip, #crs_email, #crs_phonenumber").prop( "readonly", true );
+               //$("#crs_state").attr("style", "pointer-events: none;");
+               
+            });
+    </script>    
+
+
+{% endblock %}

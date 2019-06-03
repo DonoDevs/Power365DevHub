@@ -1,0 +1,249 @@
+.visible-sm-block.visible-md-block.visible-lg-block.navbar-brand {
+    margin-left: -100px;
+}
+.navbar-static-top.navbar-inverse {
+    background-color: #b31717;
+    border-color: transparent;
+}
+.navbar-static-top.navbar-inverse {
+    background-color: #b31717;
+    border-color: transparent;
+}
+#navbar {
+    margin-top: 35px;
+}
+/*
+.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("dsusflag.jpg") no-repeat center;
+    background-size: cover;
+}
+*/
+section.page_section.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(dsusflag.jpg) no-repeat center;
+    background-size: cover;
+}
+
+section.page_section.section-sub-landing.color-inverse {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), lightblue), url("state-flags.jpg") no-repeat center;
+    background-size: cover;
+}
+.section-diagonal-right .section-diagonal-right-content {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("ds-agent.jpg") no-repeat;
+    background-size: cover;
+    margin-top: -70px;
+    background-position-y: center;
+}
+.section-diagonal-right .section-diagonal-right-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-color: transparent;
+}
+
+
+footer .footer-top {
+    width: 100%;
+    min-height: 130px;
+    background-color: #b31717;
+    display: flex;
+    align-items: center;
+}
+footer .footer-bottom {
+    width: 100%;
+    min-height: 36px;
+    background-color: #002050;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+/***************************/
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.42857;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #36f;
+    border-color: #36f;
+}
+a {
+    color: #002050;
+    text-decoration: none;
+}
+/*
+form.form-search {
+    position: relative;
+    top: -385px;
+    font-size: 18px;
+    z-index: 1000;
+    right: -220px; 
+}
+*/
+
+form.form-search {
+    position: relative;
+    top: -385px;
+    font-size: 18px;
+    z-index: 1000;
+    right: -790px;
+    width: 600px;
+}
+
+.layer_up {
+    height: 40px;
+    background: url(department-of-state-divider.png) no-repeat bottom center;
+    position: relative;
+    z-index: 20;
+    width: 1665px;
+    height: 100p;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #002050;
+}
+
+.layer_up {
+    height: 50px;
+    /* background: url(department-of-state-divider.png) no-repeat bottom center; */
+    position: relative;
+    z-index: 20;
+    width: 1665px;
+    height: 100p;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    /* border-top: 50px solid #002050; */
+    background-image: linear-gradient(360deg, #C28A0C,#fff,#112E51,#b31717);
+}
+
+.layer_up {
+    height: 50px;
+    /* background: url(department-of-state-divider.png) no-repeat bottom center; */
+    position: relative;
+    z-index: 20;
+    width: 1665px;
+    height: 100px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    /* border-top: 50px solid #002050; */
+    background-image: linear-gradient(10deg, #C28A0C,#fff,#112E51,#b31717);
+}
+.layer_up {
+    /*height: 50px;*/
+    /* background: url(department-of-state-divider.png) no-repeat bottom center; */
+    position: relative;
+    z-index: 20;
+    width: 1700px;
+    height: 40px;
+    /* border-left: 25px solid transparent; */
+    border-right: 25px solid transparent;
+    /* border-top: 50px solid #002050; */
+    background-image: linear-gradient(10deg, #C28A0C,#fff,#112E51,#b31717);
+    background-image: linear-gradient(10deg, #112E51,#fff,#b31717,#C28A0C);
+}
+
+
+
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.42857;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #002050;
+    border-color: #002050;
+}
+
+a {
+    color: #002050;
+    text-decoration: none;
+}
+
+div#home-carousel-ffe755c4-c26a-e611-80d7-00155d889a88 {
+
+    background-image: linear-gradient(600deg, #fff,#112E51);
+    transform: skew(2deg,2deg);
+}
+
+
+
+section.page_section.section-knowledge {
+    background-image: linear-gradient(10deg,#c28A0c,#FFF,#112e51,#b31717);
+}
+.row.sidebar-home {
+    padding-bottom: 0;
+    /* border-bottom-color: blue; */
+    border-bottom: 7px solid #0b80d0;
+}
+
+a.addnote.btn.btn-default {
+    color: #fff;
+    background-color: #112E51;
+    border-color: #b31717;
+}
+
+#EntityFormControl_389541bb2922e811a957000d3a328e4e_EntityFormView > h2:nth-child(15) {
+    visibility: hidden;
+}
+#EntityFormControl_389541bb2922e811a957000d3a328e4e_EntityFormView > div:nth-child(16) > div > div > fieldset > table > tbody > tr > td.clearfix.cell.lookup.form-control-cell {
+    visibility: hidden;
+}
+
+input#props_requestlineitemstotal {
+    pointer-events: none;
+    background-color: lightgrey;
+}
+input#props_requestlineitemstotalcost {
+    pointer-events: none;
+    background: lightgrey;
+}
+#EntityFormView > h2:nth-child(11) {
+    visibility: hidden;
+}
+#EntityFormView > div:nth-child(12) > div > div > fieldset > table > tbody > tr > td.clearfix.cell.lookup.form-control-cell {
+    visibility: hidden;
+}
+
+
+
+
+

@@ -1,0 +1,165 @@
+
+{% assign forums_sm = sitemarkers["Forums"] %}
+
+<style>
+  /*#BotChatGoesHere {
+    border: 1px solid #333;
+    height: 600px;
+    position: fixed;
+    width: 460px;
+    z-index: 2000;
+    bottom: 0px;
+    right: 25px;
+    background-color: white;
+    display: none;
+  }
+
+  #BotChatGoesHere p {
+    border-top: none;
+  }
+  
+  #BotIcon {
+    border: 1px solid #333;
+    position: fixed;
+    width: 460px;
+    z-index: 2000;
+    bottom: 0px;
+    right: 25px;
+    background-color: white;
+  }
+  */
+  /****************BOT ICON CSS*******************************/
+
+
+.wc-header {
+    background: #080747;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box;
+    color: #ffffff;
+    font-weight: 500;
+    height: 30px;
+    left: 0;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 0 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+#BotChatGoesHere {
+    border: 2px solid #C28A0C;
+    height: 600px;
+    position: fixed;
+    width: 460px;
+    z-index: 2000;
+    bottom: 0px;
+    right: 25px;
+    background-color: white;
+    display: none;
+}
+
+
+  #BotChatGoesHere p {
+    border-top: none;
+  }
+#BotIcon {
+    border: 7px solid #C28A0C;
+    position: fixed;
+    width: 560px;
+    height: 50px;
+    z-index: 2000;
+    bottom: 0px;
+    right: 25px;
+    background-color: #080747;
+    text-align: center;
+    color: #FFF;
+    font-size: x-large;
+}
+  
+</style>
+
+<section class="page_section section-landing">
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <h1 class="section-landing-heading">{% editable snippets 'Home/Title' default: 'Contoso' %}</h1>
+        <h2 class="section-landing-sub-heading">{% editable snippets 'Home/Subtitle' default: 'Customer' %}</h2>
+        {% include 'Search' %}
+      </div>
+    </div>
+  </div>
+  <div class="layer_down">&nbsp;</div>
+</section>
+{%comment%}Accordian News Slider with text {%endcomment%}
+<div class="col-md-12"> 
+    </div class="dsop-news-slide-text">
+      {%include 'DSOP Home Accordion News Slider Text'%}
+    </div>
+</div>
+{%comment%}Accordian News Slider 
+<div class="col-md-12"> 
+    </div class="dsop-news-slide">
+      {%include 'DSOP Accordion News Slider'%}
+    </div>
+</div>
+{%endcomment%}
+<section class="page_section section-knowledge">
+  <div class="layer_up">&nbsp;</div>
+  <div class="container">
+    <div class="content-home">
+      <h2 class="blue_border">{% editable snippets "Home/MostPopularHeading" default: resx["Most_Popular"] %}</h2>
+      {% include 'Knowledge Management - Most Popular Articles' showdescription: true %}
+    </div>
+    <div class="row sidebar-home no-lr-margins">
+      <div class="col-md-4">{% include 'Knowledge Management - Most Popular Articles' showdescription: false %}</div>
+      <div class="col-md-4">{% include 'Knowledge Management - Most Recent Articles' %}</div>
+      <div class="col-md-4">{% include 'Knowledge Management - Top Rated Articles' %}</div>
+    </div>
+  </div>
+</section>
+<section class="page_section section-sub-landing color-inverse">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text_center-mobile">
+        <h1>{{ forums_sm.adx_name | escape }}</h1>
+        {% editable snippets "Forum/HomeDescription" %}
+        <a href="{{ forums_sm.url | h }}" class="btn btn-info-home btn-lg-home" title="{{ resx['View_More_Forums'] }}">{{ snippets['Home/ViewMoreButton'] | default: resx['View_More'] | h }}</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div>
+  <div id="BotChatGoesHere"></div>
+  <div id="BotIcon">Chat Here</div>
+</div>
+<script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+<script>
+  BotChat.App({
+    directLine: { secret: 'YI1kZplOHVc.p-48VNyQkN4ZWAVzMjyAfUDXyRP_OXKEsrBqU8YJyhw' },
+    {% if user %}
+      user: { id: '{{user.id}}', name: '{{ user.fullname }}' }, 
+    {% else %}
+      user: { id: 'unknown', name: '' },
+    {% endif %}
+    bot: { id: 'HouseOfRepresentatives' },
+    resize: 'detect'
+  }, document.getElementById("BotChatGoesHere"));
+
+  bot = document.getElementById("BotChatGoesHere");
+  icon = document.getElementById("BotIcon");
+
+  icon.addEventListener('click', function() {
+    icon.style.display = "none";
+    bot.style.display = "inline";
+    document.getElementsByClassName("wc-header")[0].addEventListener('click', function() {
+      icon.style.display = "inline";
+      bot.style.display = "none";
+    });
+  });
+</script>
+
+

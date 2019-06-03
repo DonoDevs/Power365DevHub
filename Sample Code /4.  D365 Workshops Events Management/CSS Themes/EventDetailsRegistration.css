@@ -1,0 +1,34 @@
+h2.tab-title {
+    visibility: hidden;
+}
+#Event_Registrations > div > div.view-grid {
+    visibility: hidden;
+}
+/*
+#Event_Registrations > div > div.view-toolbar.grid-actions.clearfix > div {
+    float: left !important;
+}
+
+#Event_Registrations > div > div.view-toolbar.grid-actions.clearfix > div > div > a {
+    position: absolute;
+    top: -800px;
+    float: right !important;
+}
+
+#Event_Registrations > div > div.view-toolbar.grid-actions.clearfix > div > div > a {
+    position: absolute;
+    top: -800px;
+    left: -100px;
+}
+*/
+#Event_Registrations > div > div.view-empty.message > div {
+    visibility: hidden;
+}
+#Event_Registrations > div > div.view-toolbar.grid-actions.clearfix > div > div > a {
+    position: absolute;
+    top: -800px;
+    left: -200px;
+    size: large;
+    padding: 10px 70px;
+    font-size: 20px;
+}

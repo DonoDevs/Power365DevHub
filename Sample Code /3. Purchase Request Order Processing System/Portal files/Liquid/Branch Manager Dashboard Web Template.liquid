@@ -1,0 +1,57 @@
+<div class="portal dashboard container">
+
+ <div class="page-header">
+
+   <h1 aria-label="{{ snippets['Portal Dashboard Title'] | default: resx['Portal_Dashboard_Title'] | h }}">{% editable snippets "Portal Dashboard Title" default: resx["Portal_Dashboard_Title"] type: 'text' tag: 'span' %}</h1>
+
+ </div>    
+
+ <div class="row">
+
+  <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Branch Management Approval -->
+
+     {% chart id:"3FA329CC-672D-E811-A95C-000D3A328903" viewid:"02B6B151-CD16-E811-A957-000D3A328D2E" %}
+
+   </div>
+
+    <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Branch Manager -->
+
+     {% chart id:"7D87074B-682D-E811-A95C-000D3A328903" viewid:"02B6B151-CD16-E811-A957-000D3A328D2E" %}
+
+   </div>
+   
+   <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Request Type -->
+
+     {% chart id:"F0C5138C-662D-E811-A95C-000D3A328903" viewid:"02B6B151-CD16-E811-A957-000D3A328D2E" %}
+
+   </div>
+   
+   <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Request Category -->
+
+     {% chart id:"34D12600-672D-E811-A95C-000D3A328903" viewid:"02B6B151-CD16-E811-A957-000D3A328D2E" %}
+
+   </div>
+ <!--
+    <div class="col-md-12 show-chart-legend ">
+
+     <!-- 12 column chart -->
+     {%comment%}
+     {% chart id:"" viewid:"" %}
+    {%endcomment%}
+  <!-- </div> -->
+
+
+   <div class="col-md-12 small" data-entitygrid-layout="compact">
+
+
+   </div>
+ </div>
+</div>

@@ -1,0 +1,100 @@
+{% assign application = entities['gnext_application'][request.params.id] %} 
+{% if application %}
+{% comment %}******This is The Control Flow Logic To surface the appropriate entity form based on the application field value of that application record*********
+  **************************************************************************************************************************************************{% endcomment%}
+
+  {% comment %} If the Application Type is Death AND The Applicant Type is Authorized Rep then surface The AOBO Death App Entity Form {% endcomment %}
+  {% if application.gnext_applicationtype.label == 'Death' and application.gnext_applicanttype.label == 'Authorized Representative' %}
+      {% entityform name: 'AOBO Death  Application View Form' %}
+
+  {% comment %} If the Application Type is Disability AND The Applicant Type is Authorized Rep then surface The AOBO Death App Entity Form {% endcomment %}
+  {% elsif application.gnext_applicationtype.label == 'Disability' and application.gnext_applicanttype.label == 'Authorized Representative' %}
+      {% entityform name: 'AOBO Disability  Application View Form' %}
+
+  {% comment %} Just Display the default baseline entity form {% endcomment %}
+  {% else %}
+      {% entityform name: 'Submitted Applications' %}
+  {% endif %}
+
+{% endif %}
+
+{% assign contact = entities['contact'][request.params.id] %}
+{%if contact%}
+Contact First name:{{contact.firstname}} Contact Last Name: {{contact.lastname}}
+{% endif %}
+
+{% assign comic = entities.contact['5DE297CC-4B28-E611-80DF-5065F38B5171'] %}  
+{% if comic %}  
+    <h2>{{ comic.new_name }}</h2>  
+    <br/>  
+    <b>Series:</b> {{ comic.new_series.label }}<br/>  
+    <b>Issue:</b> {{ comic.new_issue }}<br/>  
+    <b>Release Date:</b> {{ comic.new_releasedate | date: 'MMMM dd, yyyy' }}  
+{% else %}  
+    This comic book doesn't exist.  
+{% endif %}  
+
+{% if user %}
+    {%if user.gnext_typeofuser_t_.label== 'Applicant' or user.gnext_typeofuser_t_.label== 'Authorized/Designated Representative'%}
+        {% editable snippets "Applicant & Authorized Rep Users" type: 'html' %} 
+    {%elsif user.gnext_typeofuser_t_.label== 'Public Safety Agency Representative'%}
+        {% editable snippets "PSA Users" type: 'html' %}
+    {%else%}
+        You shit out of luck bruh
+    {%endif%}
+{%endif%}
+
+{% if user %}
+    {{user.gnext_typeofuser_t_.label}}
+    {%if user.gnext_typeofuser_t_.label== 'Public Safety Agency Representative'%}
+        {% editable snippets "PSA Users" type: 'html' %}
+    {%endif%}
+    {%else%}
+        You shit out of luck bruh
+{%endif%}
+
+{% case user.gnext_typeofuser_t_.label %} 
+{% when 'Public Safety Agency Representative' %}  
+Welcome PSA Users!  
+{% when 'Applicant' %}  
+Welcome Applicant users!
+{% when 'Authorized/Designated Representative' %}  
+Welcome Applicant and Authorized Representative users!
+{% when 'Independent Medical Examiner' %}  
+Welcome Independent Medical Examiner users! 
+{% when 'Court Reporter' %}  
+Welcome Court Reporter users!  
+{% else %}  
+Welcome to the PSOB Portal!  Please Register or sign in to access the benefits application!
+{% endcase %}
+
+{% case user.gnext_typeofuser_t_.label %} 
+{% when 'Public Safety Agency Representative' %}  
+Welcome PSA Users!
+{% editable snippets "PSA Users" type: 'html' %}  
+{% when 'Applicant' %}  
+Welcome Applicant users!
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %}
+{% when 'Authorized/Designated Representative' %}  
+Welcome Applicant and Authorized Representative users!
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %}
+{% when 'Independent Medical Examiner' %}  
+Welcome Independent Medical Examiner users! 
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %}
+{% when 'Court Reporter' %}  
+Welcome Court Reporter users! 
+{% editable snippets "Applicant and Authorized Rep Users" type: 'html' %} 
+{% else %}  
+Welcome to the PSOB Portal!  Please Register or sign in to access the benefits application!
+{% endcase %}  
+
+ 
+
+
+
+
+
+
+
+
+

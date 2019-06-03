@@ -1,0 +1,126 @@
+{% fetchxml my_query %}
+
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="gnext_application">
+    <attribute name="createdon" />
+    <attribute name="gnext_officerlastname" />
+    <attribute name="gnext_officerfirstname" />
+    <attribute name="gnext_applicationreferenceidentifier" />
+    <attribute name="gnext_otherclaimsfiled" />
+    <attribute name="gnext_officermiddlename" />
+    <attribute name="gnext_officerdateofbirth" />
+    <attribute name="gnext_applicationtype" />
+    <attribute name="gnext_applicanttype" />
+    <attribute name="gnext_name" />
+    <attribute name="gnext_applicationid" />
+    <order attribute="createdon" descending="true" />
+    <order attribute="gnext_applicationtype" descending="true" />
+    <filter type="and">
+      <condition attribute="gnext_applicationreferenceidentifier" operator="eq" value="Uhl, Todd" />
+    </filter>
+  </entity>
+</fetch>
+
+{% endfetchxml %}
+{% for result in my_query.results.entities%}
+{{ my_query.xml | escape }}
+{{ my_query.results.total_record_count }}
+{{ my_query.results.more_records }}
+{{ my_query.results.paging_cookie | escape }}
+{%endfor%}
+
+
+
+
+{% fetchxml my_query %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="contact">
+    <attribute name="fullname" />
+    <attribute name="telephone1" />
+    <attribute name="contactid" />
+    <order attribute="fullname" descending="false" />
+    <filter type="or">
+      <condition attribute="fullname" operator="like" value="%Tom%" />
+      <condition attribute="fullname" operator="like" value="%Kevin%" />
+      <condition attribute="fullname" operator="like" value="%Meg%" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+{% if user %}
+    What's good breh {{user.fullname}}'
+{% endif %}
+
+<p>This is the fetch XML and Liquid query from the portal example</p>
+<p> The fetch XML used in this uery is: {{my_query}}</p>
+
+{% fetchxml my_query %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="contact">
+    <attribute name="fullname" />
+    <attribute name="telephone1" />
+    <attribute name="contactid" />
+    <order attribute="fullname" descending="false" />
+    <filter type="or">
+      <condition attribute="fullname" operator="like" value="%Tom%" />
+      <condition attribute="fullname" operator="like" value="%Kevin%" />
+      <condition attribute="fullname" operator="like" value="%Meg%" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% if user %}
+  Hello, {{ user.fullname }}
+{% endif %}
+
+<p>This is an example of using fetchXml and Liquid to query data in CRM from the Portal:</p>
+{% fetchxml my_query %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="contact">
+    <attribute name="fullname" />
+    <attribute name="telephone1" />
+    <attribute name="contactid" />
+    <order attribute="fullname" descending="false" />
+    <filter type="or">
+      <condition attribute="fullname" operator="like" value="%Tom%" />
+      <condition attribute="fullname" operator="like" value="%Kevin%" />
+      <condition attribute="fullname" operator="like" value="%Meg%" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+
+<p><b>The FetchXml used in the query is:</b> {{ my_query.xml | escape }}</p><br/>
+<p><b>The total number of records returned is:</b>{{ my_query.results.record_count }}</p><br/>
+<p><b>The property that indicates if there are more records than the maximum (50) returned is:</b> {{ my_query.results.more_records }}</p><br/>
+<p><b>The paging cookie that you use to page through a list of records is:</b> {{ my_query.results.paging_cookie | escape }}</p>
+<p><b>This is where you loop through the records returned and build your table or list or anything you would like to do with the collection of records returned</b></p>
+<table>
+  <tr>
+     <th>Contact Id</th>
+     <th></th>
+     <th>Contact Name</th>
+  </tr>
+{% for result in my_query.results.entities %}
+  <tr>
+    <td>{{ result.id | escape }}</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>{{ result['fullname'] | escape }}</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>{{ result['telephone1'] | escape }}</td>
+  </tr>
+{% endfor %}

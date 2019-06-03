@@ -1,0 +1,82 @@
+
+<!--Reference: https://codepen.io/redfrost/pen/KzegWQ-->
+< !--Redirection Counter-->
+    <script type="text/javascript">
+        var count = 60; // Timer
+        var redirect = "/retirement/online-retirement-application/"; // Target URL
+
+        function countDown() {
+            var timer = document.getElementById("timer"); // Timer ID
+            if (count > 0) {
+                count--;
+                timer.innerHTML = "This page will redirect in " + count + " seconds."; // Timer Message
+                setTimeout("countDown()", 1000);
+            } else {
+                window.location.href = redirect;
+            }
+        }
+    </script>
+    <div id="master-wrap">
+        <div id="logo-box">
+            <div class="animated fast fadeInUp">
+                <div class="icon">&nbsp;</div>
+                <h1>&nbsp;</h1>
+            </div>
+            <div class="notice animated fadeInUp"><a class="btn animation" href="javascript:history.back()">← Back</a></div>
+            <div class="footer animated slow fadeInUp">
+                <p id="timer">
+                    <script type="text/javascript">
+                        countDown();
+                    </script>
+                </p>
+                <p class="copyright">&nbsp;</p>
+            </div>
+        </div><!-- /#logo-box -->
+    </div> <!-- /#master-wrap -->
+
+
+
+
+    <h3 class="alert alert-success" role="alert" style="text-align: center;"><u><strong>{{user.fullname}}</strong></u> Congratulations!<br>
+        You have successfully submitted your Online Retirement Application!<br>
+        You will be notified and updated by email on any status changes.<br>
+        You can also check on your status by visiting your ORA dashboard to view statutes as seen below:</h3>
+        
+        <div>
+          <hr>
+        </div>
+        
+        <div style="text-align: center;">
+          <img alt="" src="/retirement/online-retirement-application/online-retirement-submission-acknowledgment/orasuccesspagetrackingdetails.png" style="width: 1155px; height: 214px;">
+          <br>
+          <br>&nbsp;
+        </div>
+        
+        <div style="text-align: center;">
+          <button class="btn btn-secondary btn-lg" id="ORAReturnButton" style="color:#FFF; background:#000;" type="button">Return to ORA dashboard</button>
+        </div>
+        
+        <div class="footer animated slow fadeInUp">
+          <p id="timer">
+            <script type="text/javascript">
+              countDown();
+            </script>
+          </p>
+        </div>
+        <script type="text/javascript">
+          var count = 1000; // Timer
+          var redirect = "/retirement/online-retirement-application/"; // Target URL
+        
+          function countDown() {
+            var timer = document.getElementById("timer"); // Timer ID
+            if (count > 0) {
+              count--;
+              timer.innerHTML = "This page will redirect in " + count + " seconds."; // Timer Message
+              setTimeout("countDown()", 1000);
+            } else {
+              window.location.href = redirect;
+            }
+          }
+        </script>
+        
+        

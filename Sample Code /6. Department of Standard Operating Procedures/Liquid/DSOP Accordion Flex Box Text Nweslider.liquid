@@ -1,0 +1,184 @@
+<style>
+    .flexbox-slider {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        height: 500px;
+        visibility: hidden;
+    }
+/*
+    .flexbox-slider .flexbox-slide {
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+        width: 20%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        visibility: visible;
+    }
+*/
+    .flexbox-slider .flexbox-slide {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: visible;
+    border-left: solid 2px transparent;
+    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+
+
+
+    .flexbox-slider .flexbox-slide:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .flexbox-slider .flexbox-slide img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: auto;
+        width: auto;
+        min-width: 100%;
+        min-height: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .flexbox-slider .flexbox-slide .text-block {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        z-index: 4;
+        /*visibility: hidden;*/
+    }
+
+    .flexbox-slider .flexbox-slide .text-block h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #FFF;
+    }
+
+    .flexbox-slider:hover .flexbox-slide:hover {
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        width: 80%;
+    }
+
+    .flexbox-slider.flexbox-slider-demo .flexbox-slide .text-block {
+        bottom: 60px;
+    }
+
+    .flexbox-slider.flexbox-slider-demo:hover .flexbox-slide:hover .text-block {
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+        -webkit-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+        bottom: 30px;
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+
+
+
+<div class="flexbox-slider my-flexbox-slider">
+
+    <div class="flexbox-slide">
+        <img src="/ethics-accordion-image-1.jpg" alt="Slide Image">
+        <div class="text-block">
+            <u><h3>Slide #1 is here</h3></u>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren</p>
+            </div>
+        </div>
+    </div>
+    <div class="flexbox-slide">
+        <img src="/ethics-accordion-image-2.jpg" alt="Slide Image">
+        <div class="text-block">
+            <u><h3>Slide #2 is here</h3></u>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren</p>
+            </div>
+        </div>
+    </div>
+    <div class="flexbox-slide">
+        <img src="/ethics-accordion-image-3.jpg" alt="Slide Image">
+        <div class="text-block">
+            <u><h3>Slide #3 is here</h3></u>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren</p>
+            </div>
+        </div>
+    </div>
+    <div class="flexbox-slide">
+        <img src="/ethics-accordion-image-4.jpg" alt="Slide Image">
+        <div class="text-block">
+            <u><h3>Slide #4 is here</h3></u>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren</p>
+            </div>
+        </div>
+    </div>
+    <div class="flexbox-slide">
+        <img src="/ethics-accordion-image-5.jpg" alt="Slide Image">
+        <div class="text-block">
+            <u><h3>Slide #5 is here</h3></u>
+            <div class="text">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren</p>
+            </div>
+        </div>
+    </div>
+
+</div>

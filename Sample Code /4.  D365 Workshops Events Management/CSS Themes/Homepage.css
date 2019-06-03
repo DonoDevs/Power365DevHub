@@ -1,0 +1,77 @@
+.navbar-static-top.navbar-inverse {
+    /* background-color: #232222; */
+    border-color: transparent;
+    background: url(thought-2123970_1280.jpg) no-repeat center;
+    background-size: contain;
+    background-position-x: right;
+    background-color: #131313;
+}
+
+.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)), url(dynamics-365-office.png) no-repeat center;
+    background-size: contain;
+    background-position: left;
+    background-color: #633580;
+}
+body > section.page_section.section-landing > div.layer_down {
+    background-image: linear-gradient(90deg,#f65314 ,#00a1f1,#7cbb00,#ffbb00);
+    /* transform: skew(0deg, -1deg); */
+}
+body > section.page_section.section-knowledge > div.container > div > a {
+    position: absolute;
+    right: left;
+    left: 1200px;
+    top: 75px;
+}
+
+body > section.page_section.section-sub-landing.color-inverse {
+    height: 350px;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eee;
+    color: #000;
+    opacity: 1;
+    border-style: solid;
+    border-color: #0b80d0;
+    border-width: medium;
+}
+
+.event-actions {
+    padding: 5px;
+}
+
+/****************************Image Theming*****************************************/
+.navbar-static-top.navbar-inverse {
+    /* background-color: #232222; */
+    border-color: transparent;
+    background: url(thought-2123970_1280.jpg) no-repeat center;
+    background-size: contain;
+    background-position-x: right;
+    background-color: #131313;
+}
+
+.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)), url(dynamics-365-office.png) no-repeat center;
+    background-size: contain;
+    background-position: left;
+    background-color: #633580;
+}
+
+.section-sub-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #07aaf6), url(operating-system-1995434_1280.png) no-repeat center, url(ux-789162__480.jpg );
+ 
+    background-size: contain;
+    background-position-x: right;
+}
+footer .footer-bottom {
+    width: 100%;
+    min-height: 36px;
+    background-color: #633580;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+
+

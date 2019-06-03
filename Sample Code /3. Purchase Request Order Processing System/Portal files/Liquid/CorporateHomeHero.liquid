@@ -1,0 +1,306 @@
+{% assign id = 'home-carousel-' | append: page.id | escape %}
+<style type="text/css">
+  .navbar.navbar-child.navbar-empty { display: none; }
+  .home-carousel .btn-warning { color: black; letter-spacing: 0; }
+  
+  .headline {text-align: left; font-size: 20px; font-weight: 300; letter-spacing: -1px; line-height: 1.333; margin-bottom: 20px;}
+  
+  @media (min-width: 992px) {
+    .row > .col-md-8, .row > .col-md-4 { width: 50%; }
+  }
+  
+  @media (max-width: 700px) {
+    .headline {font-size: 36px; line-height: 1.2;}
+  }
+  
+  .carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+    -webkit-transition-duration: .5s; /* Safari */
+    transition-duration: .5s;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: auto;
+  text-indent: inherit;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.carousel-indicators .active {
+  margin: 0;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+}
+
+.slide-caption {
+  z-index: 3;
+  display: block;
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin:10px;
+  border: 1px solid #fff;
+  padding: 3px;
+  border-radius: 8px;
+  background-color: rgba(0, 79, 149, 0.25);
+}
+
+.carousel-indicators .active .slide-caption 
+{
+  border: 4px solid #fff;
+  padding:0px;
+  background-image:-webkit-radial-gradient(10% 10%, rgba(255, 187, 0, 1), rgba(240, 173, 78, 0.7) 80%);
+  background-image: radial-gradient(farthest-side circle at 20px 15px, rgba(255, 187, 0, 1), rgba(240, 173, 78, 0.7));
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+
+.slide-caption .headline
+{
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+}
+
+a.learn-more
+{
+  color:#ec971f;
+  font-size: 15px; 
+  font-weight: 300;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}
+
+.carousel-indicators .active a.learn-more
+{
+  color:#FFFFFF;
+}
+
+ul.carousel-indicators , ol.carousel-indicators 
+{
+    margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px)
+{
+  .carousel-caption
+  {
+     left:0%;
+     right:0%;
+     padding-bottom:0px;
+  }
+}
+
+.carousel-caption
+{
+  bottom:70px;
+  padding-bottom:0px;
+}
+
+.carousel-caption p
+{
+  font-size: 17px; 
+}
+
+.carousel-caption .heading
+{
+  text-align: left; 
+  font-size: 40px; 
+  font-weight: 300; 
+  letter-spacing: -1px; 
+  line-height: 1.333; 
+  margin-bottom: 20px;
+}
+
+
+.carousel-indicators {
+  top: 100px;
+  right: 0px;
+  width:inherit;
+  text-align: right;
+  display: inline-block;
+}
+
+.carousel-caption
+{
+  left: 0px;
+  right: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px)
+{
+  .carousel-indicators {
+    top: 13px;
+    left: inherit;
+    width: 500px;
+  }
+}
+
+
+@media (max-width: 768px)
+{
+  .carousel-indicators {
+    top: 130px;
+    left: inherit;
+    width: 300px;
+  }
+  
+  .slide-caption
+  {
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+  }
+  
+  .carousel-caption
+  {
+    top: 0px;
+  }
+    
+  .slide-caption .headline
+  {  
+    font-size: 13px;
+  }
+  .slide-caption .headline,a.learn-more
+  {  
+    font-size: 13px;
+  }
+  .carousel-indicators .active .slide-caption {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+@media (max-width: 520px)
+{
+  .carousel-caption .heading
+  {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 0px;
+    display:block;
+  }
+  
+  .carousel-caption p {
+    display:none;
+  }
+}
+
+</style>
+
+
+<div id="{{ id }}" class="carousel slide home-carousel carousel-fade" data-ride="carousel" data-interval="3000" style="background-color: #020c17;">
+  <!-- Indicators -->
+  <div class="container" style="position:relative">
+    <div class="row">
+    <ol class="carousel-indicators">
+      <li data-target="#{{ id }}" data-slide-to="0" class="active">
+        <div class="slide-caption">
+          <div style="display: table-cell; vertical-align: middle; color: white;">
+            <p class="headline">Build Powerful,<br />Secure, Self-<br />Service Portals</p>
+              <a class="learn-more" onClick="ga('send', 'event', 'Home Page Sliders', 'Click', 'Secure Self Service');window.location.href='~/adxstudio-portals/features/powerful-secure-self-service-portals/';">Learn More  <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </li>
+      <li data-target="#{{ id }}" data-slide-to="1">
+        <div class="slide-caption">
+          <div style="display: table-cell; vertical-align: middle; color: white;">
+            <p class="headline">Rich Content<br />Publishing with<br />Integrated CMS</p>
+            <a class="learn-more" onClick="ga('send', 'event', 'Home Page Sliders', 'Click', 'No Developers Required');window.location.href='~/adxstudio-portals/features/content-management/';">Learn More <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </li>
+      <li data-target="#{{ id }}" data-slide-to="2">
+        <div class="slide-caption">
+          <div style="display: table-cell; vertical-align: middle; color: white;">
+            <p class="headline">Optimized<br />for Desktop,<br />Tablet & Mobile<br />Devices</p>
+            <a class="learn-more" onClick="ga('send', 'event', 'Home Page Sliders', 'Click', 'Your Site Any Device');window.location.href='~/adxstudio-portals/features/responsive-website-design/';">Learn More <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </li> 
+      
+    </ol>
+    </div>
+  </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <div class="container carousel-caption">
+      <div style="display: table-cell; vertical-align: middle; color: white;">
+        <p class="heading">Transforming the<br />Web Engagement<br />Experience</p>
+        <p style="text-align: left;color:#fff;margin:0px;">with Adxstudio Portals and<br />Microsoft Dynamics® CRM</p>
+      </div>
+    </div>
+
+  <!-- First Slide -->
+  <div class="item active" style="background: url('/woman-smartphone-pillars_1600x571.jpg') no-repeat; background-position: 55% 50%; background-size: auto 100%; height: 400px;"></div>
+
+    
+<!-- Second Slide -->
+  <div class="item" style="background: url('/girl-using-tablet-with-stylus_1600x571.jpg') no-repeat; background-position: 70% 50%; background-size: auto 100%; height: 400px;"></div>
+    
+<!-- Third Slide -->
+  <div class="item" style="background: url('/dude-on-tablet-twinkling-lights_1600x571.jpg') no-repeat; background-position: 65% 50%; background-size: auto 100%; height: 400px;"></div>
+    
+<!-- Fourth Slide -->
+  <div class="item" style="background: url('/man-on-cliff-holding-tablet_1600x571.jpg') no-repeat; background-position: 80% 50%; background-size: auto 100%; height: 400px;"></div>
+
+</div>
+
+
+  <!-- Controls -->
+  {% comment %}
+  <a class="left carousel-control" href="#{{ id }}" role="button" data-slide="prev" style="width: 10%;">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#{{ id }}" role="button" data-slide="next" style="width: 10%;">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  {% endcomment %}
+</div>
+
+<script>
+  
+  $(".carousel-indicators li").hover(function() {
+    $($(this).attr("data-target")).carousel(parseInt($(this).attr("data-slide-to"),10));
+  });
+
+</script>
+

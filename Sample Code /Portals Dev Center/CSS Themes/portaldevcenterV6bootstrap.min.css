@@ -1,0 +1,167 @@
+/*********CSS For Nav Link for Customer Self Service Portal****************************************/
+/*Purpose: This makes it to where many navlinks can be added to the navbar without the quirky reactions of stacking the nav links*/
+.navbar-right.menu-bar.xrm-entity.xrm-editable-adx_weblinkset {
+    width: max-content;
+}
+/*********CSS For Nav Bar header text and Image for Customer Self Service Portal****************************************/
+/*Purpose: This formatting is specifically for the portal dev center theming so th at the image does not black registration link*/
+.navbar-header {
+    position: relative;
+    top: -135px;
+    margin: 40px;
+}
+/*********CSS for editing the background color of the main navigation bar for Customer Self Service Portal*******************************************/
+body > div.navbar.navbar-inverse.navbar-static-top {
+    background: #002050;
+    border-color: transparent;
+    background: url(dynamics-365-office-v2.png) no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-color: #002050;
+}
+/*********CSS for editing the background color of the main navigation bar for Customer Self Service Portal when item is clicked*******************************************/
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: #0b80d0;
+    color: #fff;
+}
+/*********CSS for the positioning of the Search bar and the size of the width of it for Customer Self Service Portal************************/
+/*
+form.form-search {
+    position: relative;
+    top: -380px;
+    font-size: 18px;
+    z-index: 1000;
+    right: -600px;
+    width: 550px;
+}
+*/
+form.form-search {
+    position: absolute;
+    top: -155px;
+    font-size: 18px;
+    z-index: 1000;
+    right: 5px;
+    width: 550px;
+}
+/*********CSS for the First HomePage Main Landing Background Image for Customer Self Service Portal******************************/
+
+body > section.page_section.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url(flowchart-white-boarding.jpg) no-repeat left,url(abstract-green-and-yellow.jpg) no-repeat center,url(group-looking-at-laptop.jpg) no-repeat right;
+    background-size: contain;
+    border-bottom: 15px solid #53a3df;
+}
+/*********CSS for the Layerdown Background Image for Customer Self Service Portal******************************/
+.layer_down {
+    height: 50px;
+    background: linear-gradient(rgba(22,160,133,0.1), rgba(22, 160, 133, 1)),url(layer_down.png) no-repeat bottom center;
+    position: absolute;
+    bottom: 0;
+    z-index: 900;
+    width: 100%;
+}
+
+.layer_up {
+    height: 40px;
+    background: transparent;
+    position: relative;
+    z-index: 20;
+}
+/*********CSS for the background color/image of the Most Popular Div for for Customer Self Service Portal***********************/
+body > section.page_section.section-knowledge {
+    background: url(lightbulb-hand.jpg) no-repeat left;
+    background-size: 1800px 900px;
+    background-position-y: center;
+    color: #000;
+}
+/*********CSS for the second image div background/color for the forums piece for Customer Self Service Portal****************************/
+body > section.page_section.section-sub-landing.color-inverse {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #07aaf6), url(website-whiteboarding.jpg) no-repeat left,url(business-team-table-meeting.jpg) no-repeat center, url(designer-at-desk.jpg) no-repeat right;
+    background-size: contain;
+}
+
+/*********CSS for the third image div bakground/color for the Get Help section for Customer Self Service Portal************************/
+/*
+#gethelp > div {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(abstract-green-yellow-red-orange.jpg) no-repeat;
+    background-size: 1800px 500px;
+    margin-top: 1px;
+}
+*/
+
+#gethelp > div {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)), url(abstract-green-yellow-red-orange.jpg) no-repeat;
+    background-size: 1800px 500px;
+    margin-top: 1px;
+    background-color: transparent;
+}
+
+
+.section-diagonal-right .section-diagonal-right-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-color: transparent;
+}
+/*******CSS for the background color of the first footer div for Customer Self Service Portal***************************************************************/
+/* body > footer > div.footer-top.hidden-print {
+    width: 100%;
+    min-height: 130px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+}
+*/
+body > footer > div.footer-top.hidden-print {
+    width: 100%;
+    min-height: 130px;
+    background-color: #949494;
+    display: flex;
+    align-items: center;
+}
+
+/******CSS for the background color of the second footer div for Customer Self Service Portal****************************************************************/
+body > footer > div.footer-bottom.hidden-print {
+    width: 100%;
+    min-height: 36px;
+    background-color: #0b80d0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+/************************/
+.layer_up {
+    height: 40px;
+    background: transparent;
+    position: relative;
+    z-index: 20;
+}
+body > section.page_section.section-knowledge {
+    background: url(lightbulb-hand.jpg) no-repeat left;
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: right;
+    color: #000;
+    background-color: #ECEEED;
+}
+.section-diagonal-right .section-diagonal-right-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-color: transparent;
+}

@@ -1,0 +1,53 @@
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true" page="1" count="1" >
+    <entity name="account" enableprefiltering="1" prefilterparametername="CRM_FilteredAccount" >
+        <attribute name="crs_fyendmonth" />
+        <attribute name="name" />
+        <attribute name="crs_incareof" />
+        <attribute name="crs_federalein" />
+        <attribute name="accountid" />
+        <attribute name="accountnumber" />
+        <attribute name="address1_stateorprovince" />
+        <attribute name="address1_name" />
+        <attribute name="crs_addressline1" />
+        <attribute name="crs_addressline2" />
+        <attribute name="crs_city" />
+        <attribute name="crs_state" />
+        <attribute name="crs_zipcode" />
+        <attribute name="address1_county" />
+        <attribute name="address1_country" />
+        <attribute name="address1_composite" />
+        <attribute name="address1_line1" />
+        <attribute name="address1_line2" />
+        <attribute name="address1_city" />
+        <attribute name="crs_physicaladdressstate" />
+        <attribute name="address1_postalcode" />
+        <attribute name="address2_line1" />
+        <attribute name="address2_line2" />
+        <attribute name="address2_city" />
+        <attribute name="crs_recordsaddressstate" />
+        <attribute name="address2_postalcode" />
+        <link-entity name="crs_registrationagent" from="crs_registrationagentid" to="crs_registrationagent" visible="true" link-type="outer" alias="agent" >
+            <attribute name="crs_zip" />
+            <attribute name="crs_state" />
+            <attribute name="crs_city" />
+            <attribute name="crs_name" />
+            <attribute name="crs_addressline1" />
+            <attribute name="crs_addressline2" />
+        </link-entity>
+        <link-entity name="crs_charityinitialregistration" from="crs_charityid" to="accountid" alias="charityregistration" >
+            <attribute name="crs_nextregistrationdue" />
+            <attribute name="crs_fiscalyearenddate" />
+            <order attribute="crs_fiscalyearenddate" descending="true" />
+            <filter type="and" >
+                <condition attribute="crs_charitystate" operator="eq" value="170960003" />
+            </filter>
+        </link-entity>
+        <filter type="and" >
+            <condition attribute="crs_charitystate" operator="eq" value="170960000" />
+        </filter>
+        <filter type="and" >
+            <condition attribute="accountnumber" operator="eq" value="CH2462900" />
+        </filter>
+    </entity>
+</fetch>
+

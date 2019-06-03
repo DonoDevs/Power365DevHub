@@ -1,0 +1,131 @@
+{% include "Layout 1 Column" %}
+
+<script>
+            var userLastName = '{{user.lastname}}' 
+            var userFirstName = '{{user.firstname}}'
+            //var userMiddleName = '{{}}'
+            var userEmail = '{{user.emailaddress1}}'
+            var userPhoneNumber = '{{user.telephone1}}'
+            
+
+            $(document).ready(function() {
+              
+               $("#props_draftedbylastname").val(userLastName);
+               $("#props_draftedbyfirstname").val(userFirstName);
+               $("#props_draftedbyemail").val(userEmail);
+               $("#props_draftedbyphonenumber").val(userPhoneNumber);
+               
+              var requestForMyself_yes = $('#props_requestisformyself_1');
+              var requestForMyself_no = $('#props_requestisformyself_0');
+              requestForMyself_yes.change(function() { populateRequestorInfo(); });
+              requestForMyself_no.change(function() { populateRequestorInfo(); });
+              populateRequestorInfo();
+           
+              /*
+               $("#props_requestorlastname").val(userLastName);
+               $("#props_requestorfirstname").val(userFirstName);
+               $("#props_requestoremail").val(userEmail);
+               $("#props_requestorphonenumber").val(userPhoneNumber);
+              */
+
+    
+               $("#props_draftedbylastname, #props_draftedbyfirstname, #props_draftedbyemail, #props_draftedbyphonenumber").prop( "readonly", true );
+               //$("#props_requestorstate").attr("style", "pointer-events: none;");
+               
+            });
+            function populateRequestorInfo() {
+            /*
+             var draftedByLastName = $('#props_draftedbylastname');
+             var draftedByFirstName = $('#props_draftedbyfirstname');
+             var draftedByMiddleInitial = $('#props_draftedbymiddleinitital');
+             var draftedByEmail = $('#props_draftedbyemail');
+             var draftedByPhoneNumber = $('#props_draftedbyphonenumber');
+            */
+             if($('#props_requestisformyself_1').is(':checked')) {
+                  $("#props_requestorlastname").val(userLastName);
+                  $("#props_requestorfirstname").val(userFirstName);
+                  $("#props_requestoremail").val(userEmail);
+                  $("#props_requestorphonenumber").val(userPhoneNumber);
+              } else {
+                  $("#props_requestorlastname").val("");
+                  $("#props_requestorfirstname").val("");
+                  $("#props_requestormiddleinitital").val("");
+                  $("#props_requestoremail").val("");
+                  $("#props_requestorphonenumber").val("");
+              } 
+ }
+ </script>    
+
+///////////////////////////////////////////////////////////////////
+
+{% include "Layout 1 Column" %}
+
+<script>
+            var userLastName = '{{user.lastname}}' 
+            var userFirstName = '{{user.firstname}}'
+            var userMiddleName = '{{user.middlename}}'
+            var userEmail = '{{user.emailaddress1}}'
+            var userPhoneNumber = '{{user.telephone1}}'
+            var userAddress1 = '{{user.address1_line1}}'
+            var userAddress2 = '{{user.address1_line2}}'
+            var userAddressCity= '{{user.address1_city}}'
+            var userAddressState= '{{user.props_address1state}}'
+            var userAddressZip= '{{user.props_address1zip}}'
+            
+            
+
+            $(document).ready(function() {
+              
+               $("#props_draftedbylastname").val(userLastName);
+               $("#props_draftedbymiddleinitital").val(usermiddlename);
+               $("#props_draftedbyfirstname").val(userFirstName);
+               $("#props_draftedbyemail").val(userEmail);
+               $("#props_draftedbyphonenumber").val(userPhoneNumber);
+               
+               
+              var requestForMyself_yes = $('#props_requestisformyself_1');
+              var requestForMyself_no = $('#props_requestisformyself_0');
+              requestForMyself_yes.change(function() { populateRequestorInfo(); });
+              requestForMyself_no.change(function() { populateRequestorInfo(); });
+              populateRequestorInfo();
+
+               $("#props_draftedbylastname, #props_draftedbyfirstname, #props_draftedbyemail, #props_draftedbyphonenumber").prop( "readonly", true );
+               //$("#props_requestorstate").attr("style", "pointer-events: none;");
+               
+            });
+            function populateRequestorInfo() {
+            /*
+             var draftedByLastName = $('#props_draftedbylastname');
+             var draftedByFirstName = $('#props_draftedbyfirstname');
+             var draftedByMiddleInitial = $('#props_draftedbymiddleinitital');
+             var draftedByEmail = $('#props_draftedbyemail');
+             var draftedByPhoneNumber = $('#props_draftedbyphonenumber');
+            */
+             if($('#props_requestisformyself_1').is(':checked')) {
+                  $("#props_requestorlastname").val(userLastName);
+                  $("#props_requestormiddleinitital").val(usermiddlename);
+                  $("#props_requestorfirstname").val(userFirstName);
+                  $("#props_requestoremail").val(userEmail);
+                  $("#props_requestorphonenumber").val(userPhoneNumber);
+                  $("#props_requestordeliveryaddress1").val(userAddress1);
+                  $("#props_requestordeliveryaddress2").val(userAddress2);
+                  $("#props_requestorcity").val(userAddressCity);
+                  $("#userAddressState").val(userAddressState);
+                  $("#props_requestorzip").val(userAddressZip);
+              } else {
+                  $("#props_requestorlastname").val("");
+                  $("#props_requestormiddleinitital").val("");
+                  $("#props_requestorfirstname").val("");
+                  $("#props_requestormiddleinitital").val("");
+                  $("#props_requestoremail").val("");
+                  $("#props_requestorphonenumber").val("");
+                  $("#props_requestordeliveryaddress1").val("");
+                  $("#props_requestordeliveryaddress2").val("");
+                  $("#props_requestorcity").val("");
+                  $("#userAddressState").val("");
+                  $("#props_requestorzip").val("");
+              } 
+ }
+ </script>    
+
+ 

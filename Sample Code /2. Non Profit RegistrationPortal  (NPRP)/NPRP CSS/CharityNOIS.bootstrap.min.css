@@ -1,0 +1,42 @@
+/*******************Working CSS All of the other pages in Active Charity Panel**********/
+#ContentContainer_MainContent_NOISPanel {
+    position: absolute;
+    width: inherit;
+    top: 820px;
+}
+/**************************************************************************************/
+
+/*******************Working CSS for NOIS List Page and Charity List Page**********/
+#ContentContainer_MainContent_NOISPanel > div > div.col-md-4 {
+    position: absolute;
+    width: 17%;
+    top: 825px;
+}
+/********************************************************************************/
+
+#ContentContainer_MainContent_NOISPanel > div > div.col-md-4 > div > div > ul > li > h4 {
+    position: absolute;
+    width: inherit;
+    top: -135px;
+}
+
+
+#ContentContainer_MainContent_NOISPanel > div > div.col-md-4 > div > div > ul {
+    position: absolute;
+    width: 100%;
+    top: -140px;
+}
+
+#ContentContainer_MainContent_NOISPanel > div > div.col-md-4 {
+    position: absolute;
+    width: inherit;
+    top: 975px;
+}
+
+
+#ContentContainer_MainContent_NOISPanel > div > div.col-md-4 {
+    position: absolute;
+    width: inherit;
+    top: 825px;
+}
+

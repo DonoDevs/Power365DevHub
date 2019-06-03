@@ -1,0 +1,53 @@
+/*CSS to hide the section holding the first, middle, last name fields for use by the webform step javascript
+#EntityFormView > div.tab.clearfix > div > div > fieldset:nth-child(4) {
+    display: none;
+}
+*/
+/*CSS to hide the section holding the first, middle, last name fields for use by the webform step javascript*/
+table.section:nth-child(1) > tbody:nth-child(2){
+    display: none;
+    }
+    
+    
+    /*CSS to disabling deleting Agency lookup field Step 2*/
+    #EntityFormView > div.tab.clearfix > div > div > fieldset:nth-child(1) > table > tbody > tr > td.clearfix.cell.lookup.form-control-cell > div.control > div.input-group {
+        pointer-events: none;
+    }
+    /*CSS to disable entering in the name and date field Step 4*/
+    #govmod_empolyeeappcertsignature {
+        pointer-events: none;
+        background: #eee;
+    }
+    #EntityFormView > div.tab.clearfix > div > div > fieldset:nth-child(3) > table > tbody > tr:nth-child(2) > td.clearfix.cell.datetime.form-control-cell > div.control > div > input {
+        pointer-events: none;
+        background: #eee;
+    }
+    
+    /*CSS for Width of the Progress Bar*/
+    ol.progress {
+        height: auto;
+        width: max-content;
+    }
+    /*CSS for Hiding the Danger Alert about dupe fields not being able to be rendered for the Application Review*/
+    #EntityFormView > div:nth-child(7) {
+        display: none;
+    }
+    /********CSS for Print Buttons*********************/
+    a#top-print-button {
+        color: #FFF;
+        background-color: #000;
+        border-color: #ccc;
+        border-radius: 5px;
+        cursor: context-menu;
+    }
+    a#bottom-print-button {
+      color: #FFF;
+        background-color: #000;
+        border-color: #ccc;
+        border-radius: 5px;
+        cursor: context-menu;
+    }
+    /*******CSS For Next/Submit Button*/
+    input#NextButton {
+      border-radius: 5px;
+    }

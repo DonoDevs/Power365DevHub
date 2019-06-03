@@ -1,0 +1,61 @@
+{% extends 'layout_1_column' %}
+{% block main %}
+<div class="portal dashboard container">
+
+ <div class="page-header">
+
+   <h1 aria-label="{{ snippets['Portal Dashboard Title'] | default: resx['Portal_Dashboard_Title'] | h }}">{% editable snippets "Metrics Portal Dashboard Title" default: resx["Portal_Dashboard_Title"] type: 'text' tag: 'span' %}</h1>
+
+ </div>    
+
+ <div class="row">
+
+  <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Stage -->
+
+     {% chart id:"B788C144-7133-E811-A95D-000D3A328903" viewid:"02B6B151-CD16-E811-A957-000D3A328D2E" %}
+
+   </div>
+
+    <div class="col-md-6 small">
+
+     <!-- Total Budget, Remaining Budget, Orders by Budget -->
+
+     {% chart id:"0E3C7A3C-2538-E811-A95B-000D3A328E4E" viewid:"31B3114-9378-479F-9979-FD3963E1C792" %}
+
+   </div>
+   
+   <div class="col-md-6 small">
+
+     <!-- Total Budget By Budget -->
+
+     {% chart id:"92861C15-1A38-E811-A95B-000D3A328E4E" viewid:"31B3114-9378-479F-9979-FD3963E1C792" %}
+
+   </div>
+   
+   <div class="col-md-6 small">
+
+     <!-- Total Number of Orders, Total Number of Purchase Request By Order -->
+
+     {% chart id:"77963CB8-2438-E811-A95B-000D3A328E4E" viewid:"31B3114-9378-479F-9979-FD3963E1C792" %}
+
+   </div>
+   <!-- Purchase Request Stage Duration Metrics -->
+ <!--
+    <div class="col-md-12 show-chart-legend ">
+
+     <!-- 12 column chart -->
+     {%comment%}
+     {% chart id:"" viewid:"69DBA24-2B38-E811-A95B-000D3A328E4E" %}
+    {%endcomment%}
+  <!-- </div> -->
+
+   <div class="col-md-12 small" data-entitygrid-layout="compact">
+
+   </div>
+ </div>
+</div>
+<h3 class="alert alert-info"><strong>Purchase Request Stage Duration Metrics (Minutes)</strong></h3>
+{% include 'entity_list' key : "Purchase Request Stage Duration Metrics" %}
+{% endblock %}

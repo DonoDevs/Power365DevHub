@@ -1,0 +1,79 @@
+<div class="portal dashboard container">
+{%include 'page copy'%}
+ <div class="page-header">
+
+   <h1 aria-label="{{ snippets['HR Services Portal Dashboard Title'] | default: resx['HR_Services_Portal_Dashboard_Title'] | h }}">{% editable snippets "HR Services Portal Dashboard Title" default: resx["HR_Services_Portal_Dashboard_Title"] type: 'text' tag: 'span' %}</h1>
+
+ </div>    
+
+
+<!-- Code block for the build of the Dashboard -->
+ <div class="row">
+
+  <div class="col-md-4 large">
+
+     <!-- Pie Chart- Packages: Retirement Application by Application Status-->
+
+     {% chart id:"79150EFB-C6BA-E811-A95B-000D3A3AC3F8" viewid:"AADA76B0-B6BB-E811-A95B-000D3A3AC3F8" %}
+
+   </div>
+   
+   <div class="col-md-4 large">
+
+     <!-- Bar Graph - Packages: ORA Oackges  by Agency-->
+
+     {% chart id:"CEDCC5B1-C0BB-E811-A95B-000D3A3AC3F8" viewid:"AADA76B0-B6BB-E811-A95B-000D3A3AC3F8" %}
+
+   </div>
+</div>
+{%comment%}
+    <div class="col-md-6 small">
+
+     <!-- Bar Graph - Packages: Retirement Application by Retirement Types-->
+
+     {% chart id:"" viewid:"" %}
+
+   </div>
+   
+   <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Request Type -->
+
+     {% chart id:"" viewid:"" %}
+
+   </div>
+   
+   <div class="col-md-6 small">
+
+     <!-- Purchase Requests By Request Category -->
+
+     {% chart id:"" viewid:"" %}
+
+   </div>
+ <!--
+    <div class="col-md-12 show-chart-legend ">
+
+      12 column chart 
+     {%comment%}
+     {% chart id:"" viewid:"" %}
+    {%endcomment%}
+</div> -->
+{%endcomment%}
+
+<!-- Entity List for HR to see a list of all the applicants applications that are associated to their organization-->
+ <div class = "retirement-applications-list">
+    <!--<label id= "agencyapplicationslistlabel" for="retirement-applications-list"><h3>My Agency's Retirement Applications</h3> </label>-->
+    <h3 class="alert alert-info" id="hrapplicationslistlabel" style="background-color:#000; text-align:center; color:#FFF"><strong>Retirement Packages</strong></h3>
+    <div class="view-toolbar grid-actions clearfix"><a  class="btn btn-primary pull-right action">Online Retirement Application Package Status</a><div class="pull-right toolbar-actions"></div></div>
+    {% include 'entity_list' key : "HR Applicant Packages" %}
+ </div>
+   <div class="col-md-12 small" data-entitygrid-layout="compact">
+
+
+   </div>
+ </div>
+</div>
+
+
+<script>
+</script>

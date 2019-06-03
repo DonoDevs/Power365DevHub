@@ -1,0 +1,181 @@
+/*********CSS For Nav Link for Customer Self Service Portal****************************************/
+/*Purpose: This makes it to where many navlinks can be added to the navbar without the quirky reactions of stacking the nav links*/
+.navbar-right.menu-bar.xrm-entity.xrm-editable-adx_weblinkset {
+    width: max-content;
+}
+/*********CSS For Nav Bar header text and Image for Customer Self Service Portal****************************************/
+
+.navbar-header {
+    position: relative;
+    top: -15px;
+    margin: 10px;
+}
+/*********CSS Positioning of the Navbar weblinks set for Customer Self Service Portal****************************************/
+ul.nav.navbar-nav.weblinks {
+    position: relative;
+    /* margin-top: 4px; */
+    top: 40px;
+}
+/*********CSS For Nav Bar background color for Customer Self Service Portal****************************************/
+.navbar-static-top.navbar-inverse {
+    background-color: #080747;
+    border-color: transparent;
+    border-bottom: 8px solid #C28A0C;
+    padding-bottom: 10px;
+}
+/*on Hover*/
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #fff;
+    background-color: #EA1921;
+    border-bottom: 4px solid #C28A0C;
+    padding-bottom: 10px;
+}
+
+/*On click Active*/
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: #EA1921;
+    color: #fff;
+    border-bottom: 4px solid #C28A0C;
+    padding-bottom: 10px;
+}
+
+/*On Drop Down Click*/
+ul.dropdown-menu {
+    border-style: solid;
+    border-color: #C28A0C;
+    border-width: 2px;
+}
+
+/*********CSS for Search Bar for Customer Self Service Portal******************************/
+form.form-search {
+    position: absolute;
+    top: -110px;
+    right: -20px;
+    width: 710px;
+    z-index: 1000;
+}
+/*********CSS for the First HomePage Main Landing Background Image for Customer Self Service Portal******************************/
+.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(american-flag-1.jpeg) no-repeat center;
+    background-size: cover;
+    border-bottom: 15px solid #C28A0C;
+}
+/*********CSS for taking away the pointed figure of the main photo for Customer Self Service Portal******************************/
+.layer_down {
+    height: 50px;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    z-index: 900;
+    width: 100%;
+}
+
+.layer_up {
+    height: 0px;
+    background: transparent;
+    position: relative;
+    z-index: 20;
+}
+
+/***********************Accordian CSS****************************/
+body > div.accordian {
+    position: relative;
+    top: -120px;
+    height: 520px;
+    border-left: solid 5px transparent;
+}
+body > div.accordian > ul > li:nth-child(5) > a > img {
+    width: 2000px;
+}
+body > div.accordian > ul > li:nth-child(2) > div > a {
+    display: none;
+}
+
+
+/*********CSS for top footer image for Customer Self Service Portal******************************/
+.section-sub-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #07aaf6), url(footer-top-image-.jpg) no-repeat center;
+    background-size: cover;
+}
+/*********CSS for bottom footer image for Customer Self Service Portal******************************/
+.section-diagonal-right .section-diagonal-right-content {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(footer-bottom-image-.jpg) no-repeat;
+    background-size: cover;
+    margin-top: -70px;
+}
+
+
+
+
+/*********CSS for top footer for Customer Self Service Portal******************************/
+footer .footer-top {
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    background: #EA1921;
+}
+
+/*********CSS for bottom footer for Customer Self Service Portal******************************/
+footer .footer-bottom {
+    width: 100%;
+    min-height: 36px;
+    background-color: #080747;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/****************BOT ICON CSS*******************************/
+.wc-header {
+    background: #080747;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box;
+    color: #ffffff;
+    font-weight: 500;
+    height: 30px;
+    left: 0;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 0 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+
+#BotChatGoesHere {
+    border: 2px solid #C28A0C;
+    height: 600px;
+    position: fixed;
+    width: 460px;
+    z-index: 2000;
+    bottom: 0px;
+    right: 25px;
+    background-color: white;
+    display: none;
+}
+
+
+  #BotChatGoesHere p {
+    border-top: none;
+  }
+#BotIcon {
+    border: 7px solid #C28A0C;
+    position: fixed;
+    width: 560px;
+    height: 50px;
+    z-index: 2000;
+    bottom: 0px;
+    right: 25px;
+    background-color: #080747;
+    text-align: center;
+    color: #FFF;
+    font-size: x-large;
+}

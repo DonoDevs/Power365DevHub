@@ -1,0 +1,37 @@
+{% extends 'layout_1_column' %}
+{% block main %}
+<div class="portal dashboard container">
+
+ <div class="page-header">
+
+   <h1 aria-label="{{ snippets['Portal Dashboard Title'] | default: resx['Portal_Dashboard_Title'] | h }}">{% editable snippets "Metrics Portal Dashboard Title" default: resx["Portal_Dashboard_Title"] type: 'text' tag: 'span' %}</h1>
+
+ </div>    
+
+ <div class="row">
+
+  <div class="col-md-6 small">
+
+     <!-- Emails By Key Phrases -->
+
+     {% chart id:"391A5DEE-FB39-E911-A82C-000D3A37557B" viewid:"F4CF8C25-FD39-E911-A829-000D3A375321" %}
+
+   </div>
+
+    <div class="col-md-6 small">
+
+     <!-- Contacts by State -->
+
+     {% chart id:"7728DACA-8C20-E811-A957-000D3A3702CA" viewid:"00000000-0000-0000-00AA-000010001004" %}
+
+   </div>
+
+   <div class="col-md-12 small" data-entitygrid-layout="compact">
+
+   </div>
+ </div>
+</div>
+<h3 class="alert alert-info"><strong>Emails</strong></h3>
+{% include 'entity_list' key : "Emails" %}
+{% endblock %}
+

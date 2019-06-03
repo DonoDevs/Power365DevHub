@@ -1,0 +1,73 @@
+{% include "Layout 1 Column" %}
+{% block main %}
+
+    {% assign event = entities['props_event'][request.params.id] %} 
+    {% fetchxml my_query %}
+    <fetch version="1.0" mapping="logical">
+    <entity name="props_eventregistration">
+        <attribute name="props_eventregistrationid">
+        <attribute name="props_name">
+            <attribute name="createdon">
+            <order attribute="props_name" descending="false">
+                <filter type="and">
+                <condition attribute="props_eventid" operator="eq" value="{{ request.params['id'] | xml_escape }}">
+                </condition>
+                </filter>
+            </order>
+            </attribute>
+        </attribute>
+        </attribute>
+    </entity>
+    </fetch>
+    {% endfetchxml %}
+    {%comment%}
+    <p><b>*************************Results Returned from Fetch XML Query****************************</b></p>
+     <p><b>Entity ID: </b>{{ request.params['id']}}</p>
+    <p><b>The total number of records returned is:</b>{{ my_query.results.entities.size }}</p>
+    {%endcomment%}
+            {%assign registrationQuerysCount = my_query.results.entities.size %}
+            {%assign registrationCount = registrationQuerysCount | times: 1 %}
+            {%assign maxRegistration = event.mgs_maximumregistrations %}
+            {%assign registrationSpotsLeft = maxRegistration | minus: registrationCount %}
+            {%if registrationSpotsLeft < 1%}
+                            <script>
+                                alert("No more Registration Spots Available"); 
+                                $("#Event_Registrations").hide(100000);  
+                            </script> 
+                            <div class ="Event-Capacity-Details-Registration-ClosedNoSpots">
+                                <p><b>The total number of records returned is:</b>{{ my_query.results.entities.size }}</p>
+                                <p><b>Entity ID: </b>{{ event.id}}</p>
+                                <p><b>MaxRegistration from Request Params by Entity ID: </b>{{ event.mgs_maximumregistrations}}</p>
+                                <p><b><u>Event Registration Capacitity Details</u></b></p>
+                                <p><b>Event Max Registrations is: </b>{{event.mgs_maximumregistrations}}</p>
+                                <p><b>Total Event Registrations:</b>{{ entityview.total_records }}</p>
+                                <p><b>Registration Spots  Left:  </b>{{ registrationSpotsLeft}}</p>
+                                <a  class="btn btn-primary btn-large"style="background:red " >
+                                    
+                                    <span class="fa fa-times-circle"></span>Registration Maximum Capacity Reached. 
+                                </a>    
+                            </div>      
+                    {%else%}
+                            <script>
+                                //alert("Registration Spots Available");
+                            </script>
+                            <div class ="Event-Capacity-Details-Registration-OpenSpots">
+                                <p><b>The total number of records returned is:</b>{{ my_query.results.entities.size }}</p>
+                                <p><b>Entity ID: </b>{{ event.id}}</p>
+                                <p><b>MaxRegistration from Request Params by Entity ID: </b>{{ event.mgs_maximumregistrations}}</p>
+                                <p><b><u>Event Registration Capacitity Details</u></b></p>
+                                <p><b>Event Max Registrations is: </b>{{event.mgs_maximumregistrations}}</p>
+                                <p><b>Total Event Registrations:</b>{{ entityview.total_records }}</p>
+                                <p><b>Registration Spots  Left:  </b>{{ registrationSpotsLeft}}</p>
+                            </div> 
+
+            {%endif%}
+
+    
+    {% for result in my_query.results.entities %} 
+
+            
+    {% endfor %}
+
+
+{% endblock %}

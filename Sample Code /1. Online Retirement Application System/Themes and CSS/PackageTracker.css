@@ -1,0 +1,67 @@
+/*Progress bar background color*/
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+    width: 0px;
+    box-shadow: none;
+    background: #000;
+}
+/*Bubble Color*/
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: gray;
+    top: 45px;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 50%;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    background: #337ab7;
+    border: #FFF;
+    border-radius: 50px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+/*Disabled bubble border*/
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: #f5f5f5;
+    border-bottom-style: solid;
+    border-color: black;
+}
+#337ab7
+
+
+/*Step 1 Background Color and Text Color*/
+body > div.container > div.xrm-editable-html.xrm-attribute > div > div > div:nth-child(1) > div.text-center.bs-wizard-stepnum {
+    background: #595959;
+    color: #FFF;
+}
+/*Step 2 Background Color and Text Color*/
+body > div.container > div.xrm-editable-html.xrm-attribute > div > div > div:nth-child(2) > div.text-center.bs-wizard-stepnum {
+    background: #595959;
+    color: #FFF;
+}
+/*Step 3 Background Color and Text Color*/
+body > div.container > div.xrm-editable-html.xrm-attribute > div > div > div:nth-child(3) > div.text-center.bs-wizard-stepnum {
+    background: #595959;
+    color: #FFF;
+}
+/*Step 4 Background Color and Text Color*/
+body > div.container > div.xrm-editable-html.xrm-attribute > div > div > div:nth-child(4) > div.text-center.bs-wizard-stepnum {
+    background: #595959;
+    color: #FFF;
+}
+
+/*Step Text Properties*/
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: #337ab7;
+    font-size: 14px;
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+{% assign queryId = request.params['stepid'] %}
+{%if queryId != null%}
+{% assign webformstep = entities.adx_webformstep[queryId] %}
+    <script>
+    var charityregwebformstepid = '{{webformstep.crs_webformstepid}}'
+    $(document).ready(function() {
+       $("#crs_webformstepid").val(charityregwebformstepid);
+    });
+    </script>
+    
+{%endif%}

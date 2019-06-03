@@ -1,0 +1,7 @@
+$(document).ready(function () {
+    $('#EntityFormView > h2:nth-child(8)').prepend('<h3 class="alert alert-info" id="agencyemployeelistlabel" style="background-color:#000; border-color: #000; text-align:center; color:#FFF"><strong>Online Retirement Application Review</strong></h3>');
+  $('#WebFormControl_a3b5737385bbe811a95b000d3a3ac3f8_ProgressIndicator').append('<div class="btn-group"><a id="top-print-button" href="javascript:window.print()" role="button" aria-label="Print" class="btn btn-default btn-lg"><i class="fa fa-print"></i> <span>Print Retirement Application</span></a></div>');
+  $('#WebFormPanel > div.actions > div.col-sm-6.clearfix > div:nth-child(2)').append('<div class="btn-group"><a id="bottom-print-button" href="javascript:window.print()" role="button" aria-label="Print" class="btn btn-default btn"><i class="fa fa-print"></i> <span>Print Retirement Application</span></a></div>');
+    //var printreviewBanner = $('<h3 class="alert alert-info" id="agencyemployeelistlabel" style="background-color:#000; text-align:center; color:#FFF"><strong>Online Retirement Application Review</strong></h3>');
+    //var applicationHeader = $('#EntityFormControl_19331e3684bfe811a95c000d3a3acde0_EntityFormView > h2:nth-child(8)');
+  });

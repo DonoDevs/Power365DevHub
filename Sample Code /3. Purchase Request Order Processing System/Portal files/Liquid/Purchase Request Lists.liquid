@@ -1,0 +1,32 @@
+{% extends 'layout_1_column' %}
+{% block main %}
+{% if user %}
+    {% assign purchaseRequestor= user | has_role: 'Purchase Requestor' %}
+    {% assign branchManager= user | has_role: 'Branch Manager' %}
+    {% assign gateKeeper= user | has_role: 'GateKeeper' %}
+    {% assign supplyManager= user | has_role: 'Supply Manager' %}
+    {% assign budgetAcquisition= user | has_role: 'Budget Acquisition and Execution' %}
+
+    
+    {% if purchaseRequestor %}
+        <div class="alert alert-info">Hello, {{user.fullname}}. You are a "Purchase Requestor" portal user. To see dashboards, please contact support to gain access to manager dashboards if you are a "Branch Manager", "Gate Keeper Reviewer", "Supply manager" or apart of "Budget Acquisition/Execution" </div>  
+    {% elsif branchManager %}
+        {% include 'Branch Manager Dashboard Web Template' %}
+    {% elsif gateKeeper %}
+        {User {{user.fullname}} is a GateKeeper}
+    {% elsif supplyManager%}
+        {User {{user.fullname}} is a Supply Manager}
+    {% elsif budgetAcquisition%}
+        {User {{user.fullname}} is a Budget Acquisition and Execution}
+    {% else %}
+        {User {{user.fullname}} does not have a PROPS web role assigned. Please contact administrator to get access}
+    {% endif %}
+ 
+     <h3 class="alert alert-info"><strong>My Submitted Purchase Requests</strong></h3>
+    
+    {% include 'entity_list' key : "Purchase Requests" %}
+    
+    {% else %}
+        <h2>Please sign in to access purchase requesting capabilities.<h2>
+{% endif %}
+{% endblock %}

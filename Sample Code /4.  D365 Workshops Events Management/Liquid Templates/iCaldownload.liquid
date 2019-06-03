@@ -1,0 +1,16 @@
+{% assign event = entities.props_event[request.params.id] %}
+{% if event %}
+BEGIN: VCALENDAR
+VERSION:2.0
+PRODID: -//xrmvirtual.com//NONSGML ical.net 2.1//EN
+BEGIN:VEVENT
+DTEND:{{event.props_eventenddate | date_to_iso8601 | remove: '-'}}
+DTSTAMP:{{event.props_eventstartdate | date_to_iso8601 | remove: '-'}}
+DTSTART:{{event.props_eventstartdate | date_to_iso8601 | remove: '-'}}
+SEQUENCE: 0
+SUMMARY:{{event.props_name}}
+X-ALT-DESC;FMTTYPE=text/html:{{event.props_eventsummary}} {% if event.mgs_eventurl %}<p><a href="{{event.mgs_eventurl}}">Join event...</a></p>{% endif %}
+UID: {{event.id}}
+END:VEVENT
+END:VCALENDAR
+{% endif %}

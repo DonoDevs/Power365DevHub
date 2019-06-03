@@ -1,0 +1,99 @@
+
+#HomepageUpperContainer {
+    text-align: left;
+    background-image: url(https://www.opm.gov/img/home/Homepage_bg.jpg);
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    padding: 0px 0px 30px;
+}
+
+
+#HomepageSections > div.current {
+    display: contents;
+    
+}
+
+.audienceSlide h3 {
+    padding: 62px 0px 5px 0px;
+    line-height: 1.2em;
+    height: 100px;
+    white-space: nowrap;
+}
+
+#AudienceSelector {
+    float: left;
+    list-style-type: none;
+    height: 185px;
+    padding: 0px;
+    margin: 0px 30px 0px 0px;
+    padding-top: 13px;
+    background: url(https://www.opm.gov/img/Home/audience_divider.png) no-repeat 215px 5px;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #363636;
+}
+#AudienceSelector li a {
+    display: block;
+    padding: 7px 0px 0px 15px;
+    height: 20px;
+    color: #2E2E2E;
+    font-size: 1.1em;
+    letter-spacing: .0em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#AudienceSelector li {
+    height: 28px;
+    width: 225px;
+    display: block;
+    padding: 7px 0px 0px 15px;
+}
+
+
+body > header:nth-child(6) > section > div {
+    background-color: black;
+    height: 50px;
+}
+body > header:nth-child(6) > section > div > div > div > form > div {
+    padding: 18px;
+    left: 25%;
+}
+/**************************NEW CSS POST Section Creation in the Web Template***************/
+
+/************HomePage SLider Section Background*******************/
+body > section.page_section.section-homeslider {
+    /* background-image: url(https://www.opm.gov/img/home/Homepage_bg.jpg); */
+    background-color: #EEE;
+    background: #DDDDDD;
+}
+
+/*******Audience SLides H3 sizing**********/
+.audienceSlide h3 {
+    padding: 62px 0px 5px 0px;
+    line-height: 1.2em;
+    height: 100px;
+    white-space: nowrap;
+    font-size: large;
+}
+/*********CSS For Search Bar Section and search bar********/
+body > section.page_section.section-search {
+    background-color: black;
+    height: 70px;
+}
+/****Search Bar Element Sizing***/
+.ORA-Home-search {
+    position: relative;
+    right: -200px;
+    top: -18px;
+}
+input#q {
+    height: 35px;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: #C28A0C;
+}
+.form-search .btn {
+    border: 1px solid #C28A0C;
+    height: 35px;
+}
+

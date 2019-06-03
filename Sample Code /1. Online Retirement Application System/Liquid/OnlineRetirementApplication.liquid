@@ -1,0 +1,46 @@
+{% extends "Layout 1 Column" %}
+{% block main %}
+{% include "Page Copy"%}
+
+<div class = "retirement-applications-list">
+    <!--<label id= "agencyapplicationslistlabel" for="retirement-applications-list"><h3>My Agency's Retirement Applications</h3> </label>-->
+    <h3 class="alert alert-info" id="agencyapplicationslistlabel" style="background-color:#000; text-align:center; color:#FFF"><strong>Retirement Package</strong></h3>
+    <!--<a  class="btn btn-primary pull-right action">Online Retirement Application Package Status</a><div class="pull-right toolbar-actions"></div>-->
+    {% include 'entity_list' key : "Online Retirement Applications" %}
+
+ </div>
+
+{% endblock %}
+
+{%comment%}
+Package Statuses: govmod_orapackagestatus (This field is set on the portal contact and is updated by a workflow when ever the related package staus changes)
+--------------------------------------
+Summary of Service Review - 907300000
+HR Review - 907300001
+Payroll Review - 907300002
+Package Submitted to OPM - 907300003
+Not yet reviewed - 907300004
+{%endcomment%}
+
+{%comment%}
+Application Statuses: govmod_applicationstatus 
+--------------------------------------
+Not Started -907300000
+Identifcation Started - 907300001
+Identification Completed - 907300002
+Service Started - 907300006
+Service Completed - 907300005
+Military Service Started - 907300007
+Military Service Completed - 907300008
+Military Retired Pay Started - 907300003
+Military Retired Pay Completed - 907300004
+Supporting Documents Started - 907300009
+Supporting Documents Completed - 907300010
+Applicant Application Certification Started - 907300011
+Applicant Application Certification Completed - 907300012
+
+{%endcomment%}
+
+
+
+

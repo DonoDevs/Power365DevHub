@@ -1,0 +1,35 @@
+{% include "Layout 1 Column" %}
+{% block main %}
+
+{%comment%}
+    portalApplicant id is: {{ portalApplicant.id }} ---------------------------------
+    portalApplicant firstname is: {{ portalApplicant.firstname }} ---------------------------------
+    portalApplicant middlename is: {{ portalApplicant.middlename }} ---------------------------------
+    portalApplicant lastname is: {{ portalApplicant.lastname }} ---------------------------------
+    portalApplicant entity logical name is: {{portalApplicant.logicalname}}----------------------
+    Your Query String is: {{request.url}}--------------------
+{%endcomment%}
+    
+    <script>
+           
+            var payrollOfficerID = '{{user.id}}'
+            var payrollOfficerName = '{{user.fullname}}'
+            var payrollOfficerEntityLogicalName = '{{user.logicalname}}'
+            var payrollOfficerFirstname = '{{user.firstname}}'
+            var payrollOfficertMiddlename = '{{user.middlename}}'
+            var payrollOfficerLastname = '{{user.lastname}}'
+            var payrollOfficerEmail = '{{user.emailaddress1}}'
+            var payrollOfficerPhone = '{{user.telephone1}}'
+            
+            
+
+            $(document).ready(function() {
+               $("#govmod_profficertelephonenumber").val(payrollOfficerPhone);
+               $("#govmod_profficeremailaddress").val(payrollOfficerEmail);  
+               $("#govmod_payrollofficerfirstname").val(payrollOfficerFirstname);
+               $("#govmod_payrollofficerlastname").val(payrollOfficerLastname);
+            });
+    </script>    
+
+
+{% endblock %}

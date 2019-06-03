@@ -1,0 +1,107 @@
+.navbar-static-top.navbar-inverse {
+    background-color: #b31717;
+    border-color: transparent;
+}
+div#navbar {
+    margin-top: 35px;
+}
+.section-landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(dsusflag.jpg) no-repeat center;
+    background-size: cover;
+}
+
+section.page_section.section-sub-landing.color-inverse {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), lightblue), url(state-flags.jpg) no-repeat center;
+    background-size: cover;
+}
+/*
+.section-diagonal-right .section-diagonal-right-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+    background-color: #36F;
+    background-image: url(department-of-state-divider.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+*/
+.section-diagonal-right-content {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -1;
+    /*background-color: #36F;*/
+    background-image: url(department-of-state-divider.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.section-diagonal-right .section-diagonal-right-content {
+    -webkit-transform: skew(0deg, -1.3deg);
+    -ms-transform: skew(0deg, -1.3deg);
+    transform: skew(0deg, -1.3deg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(ds-agent.jpg) no-repeat;
+    margin-top: -70px;
+    background-size: cover;
+    background-position-y: center;
+}
+
+
+
+
+
+footer .footer-top {
+    width: 100%;
+    min-height: 130px;
+    background-color: #b31717;
+    display: flex;
+    align-items: center;
+}
+footer .footer-bottom {
+    width: 100%;
+    min-height: 36px;
+    background-color: darkblue;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+#EntityFormControl_389541bb2922e811a957000d3a328e4e_EntityFormView > h2:nth-child(15) {
+    visibility: hidden;
+}
+#EntityFormControl_389541bb2922e811a957000d3a328e4e_EntityFormView > div:nth-child(16) > div > div > fieldset > table > tbody > tr > td.clearfix.cell.lookup.form-control-cell {
+    visibility: hidden;
+}
+h2.tab-title {
+    visibility: hidden;
+}
+td.clearfix.cell.lookup.form-control-cell {
+    visibility: hidden;
+}
+
+input#props_requestlineitemstotal {
+    pointer-events: none;
+    background-color: lightgrey;
+}
+input#props_requestlineitemstotalcost {
+    pointer-events: none;
+    background: lightgrey;
+}
+
+#EntityFormView > h2:nth-child(11) {
+    visibility: hidden;
+}
+#EntityFormView > div:nth-child(12) > div > div > fieldset > table > tbody > tr > td.clearfix.cell.lookup.form-control-cell {
+    visibility: hidden;
+}
